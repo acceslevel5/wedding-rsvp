@@ -345,7 +345,7 @@ import imgHolyCeremony from "./holyceremony.png";
 function Bg() {
   const tiles = Array.from({ length: 17 });
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[710px] overflow-hidden" style={{ height: "6810px" }} data-name="BG">
+    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[710px] overflow-hidden" style={{ height: "6790px" }} data-name="BG">
       {tiles.map((_, idx) => (
         <div key={idx} className="relative shrink-0 size-[402px]" data-name={`white-recycle-paper-texture ${idx + 1}`}>
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
@@ -3468,7 +3468,7 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
 
 function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp: any; onSubmit: any; isSubmitting: boolean }) {
   return (
-    <div className="-translate-x-1/2 absolute top-[7565px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
+    <div className="-translate-x-1/2 absolute top-[7545px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
       <div aria-hidden className="absolute bg-[#ffe3f6] inset-0 mix-blend-multiply pointer-events-none" />
       <Frame18 />
       <Frame20 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
@@ -3913,8 +3913,8 @@ export default function Landing({
   };
 
   return (
-    <div className="relative w-[402px] h-[8659px]" data-name="Landing">
-      <div className="absolute left-[79px] size-[254px] top-[8740px]" data-name="O Sole Mio 1" />
+    <div className="relative w-[402px] h-[8639px]" data-name="Landing">
+      <div className="absolute left-[79px] size-[254px] top-[8720px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
       <div 
