@@ -3778,11 +3778,11 @@ export default function Landing({
                 color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                fontSize: '38px',
+                fontSize: '42px',
                 fontStyle: 'normal',
                 fontWeight: 200,
                 lineHeight: '115%',
-                letterSpacing: '-0.68px',
+                letterSpacing: '-0.84px',
               }}
             >
               Datuna
@@ -3792,7 +3792,7 @@ export default function Landing({
                 color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"Babylonica:Regular", Babylonica, cursive',
-                fontSize: '42px',
+                fontSize: '46px',
                 fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: '150%',
@@ -3805,11 +3805,11 @@ export default function Landing({
                 color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                fontSize: '38px',
+                fontSize: '42px',
                 fontStyle: 'normal',
                 fontWeight: 200,
                 lineHeight: '115%',
-                letterSpacing: '-0.68px',
+                letterSpacing: '-0.84px',
               }}
             >
               Natura
@@ -3820,7 +3820,7 @@ export default function Landing({
           <div
             style={{
               position: 'absolute',
-              top: '90px',
+              top: '94px',
               width: '402px',
               display: 'flex',
               justifyContent: 'center',
@@ -3832,7 +3832,7 @@ export default function Landing({
                 color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"Ballet:Regular", Ballet, cursive',
-                fontSize: '50px',
+                fontSize: '56px',
                 fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
