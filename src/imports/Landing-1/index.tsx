@@ -3656,7 +3656,7 @@ function TimelineSection() {
     <div 
       className="absolute left-0 top-[4467px] w-[402px] flex flex-col items-center z-10"
       style={{
-        background: '#F8F6F0',
+        background: 'transparent',
         paddingTop: '80px',
         paddingBottom: '120px',
       }}
