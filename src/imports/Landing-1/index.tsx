@@ -1213,7 +1213,7 @@ function Frame8() {
         <BlurFadeWords text="Accomodation" />
       </p>
       <p className="font-['Cormorant_Garamond:Medium_Italic',sans-serif] font-medium italic leading-[normal] min-w-full relative shrink-0 text-[18px] tracking-[-0.09px] w-[min-content]">
-        <BlurFadeWords text="Rooms Hotel Batumi. Let’s make memories that will last a lifetime!" />
+        <BlurFadeWords text="Enjoy an exclusive wedding rate at Rooms Hotel Batumi, reserved especially for our guests." />
       </p>
     </div>
   );
