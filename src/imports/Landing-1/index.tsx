@@ -3710,8 +3710,8 @@ export default function Landing({
     } else if (step === 'printing' || step === 'printed') {
       transformStr = 'translateY(0%) scale(1)';
     } else if (isExpanded) {
-      // Shift photo strip higher up (-105px) and scale to 1.6x so bottom ends cleanly at ~548px
-      transformStr = 'translateY(-105px) scale(1.6)';
+      // Scale 1.8x (height = 574px) with top edge aligned right at top: 20px
+      transformStr = 'translateY(-218px) scale(1.8)';
     }
 
     let transitionStr = 'transform 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
@@ -3916,7 +3916,7 @@ export default function Landing({
         <div 
           className="absolute left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none transition-all duration-700"
           style={{
-            top: '595px',
+            top: '605px',
             opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
           }}
         >
