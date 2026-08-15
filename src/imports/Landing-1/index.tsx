@@ -339,6 +339,7 @@ import imgImage9 from "./6c590bc9a68493798aa84d309533e423f2f3e3c8.png";
 import imgImage11 from "./1613d811fda01150e34828fa74a702460eabab63.png";
 import imgImage12 from "./a82a9ee50e31e80118eb5016ff78bc5d1e8f8062.png";
 import imgImage10 from "./672fa1b57ac1ff3c7c0332d5f72735c8d31c49f7.png";
+import imgImage8 from "./7a7a1fda92711f7908f867f3b7d1545ad7a40b15.png";
 import imgHolyCeremony from "./holyceremony.png";
 import imgWarmWelcome from "./warm welcome.png";
 import imgSayingIDo from "./saying i do.png";
