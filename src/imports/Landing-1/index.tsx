@@ -1639,7 +1639,7 @@ function Frame3({ onBookStay }: { onBookStay?: () => void }) {
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[828.083px] left-1/2 top-[calc(50%-0.46px)] w-[402px]" data-name="Union">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="828.083" src={imgUnion} width="402" />
       </div>
-      <div className="absolute bottom-[70px] left-[24px] right-[24px] z-10">
+      <div className="absolute bottom-[110px] left-[24px] right-[24px] z-10">
         <Frame4 onBookStay={onBookStay} />
       </div>
     </div>
