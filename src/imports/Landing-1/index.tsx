@@ -3710,8 +3710,8 @@ export default function Landing({
     } else if (step === 'printing' || step === 'printed') {
       transformStr = 'translateY(0%) scale(1)';
     } else if (isExpanded) {
-      // Shifted 120px down from previous -188px -> -68px
-      transformStr = 'translateY(-68px) scale(2.12)';
+      // Shifted 40px up from previous -68px -> -108px
+      transformStr = 'translateY(-108px) scale(2.12)';
     }
 
     let transitionStr = 'transform 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
@@ -3916,7 +3916,7 @@ export default function Landing({
         <div 
           className="absolute left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none transition-all duration-700"
           style={{
-            top: '820px',
+            top: '780px',
             opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
           }}
         >
