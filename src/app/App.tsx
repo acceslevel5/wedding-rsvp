@@ -149,6 +149,8 @@ export default function App() {
     }, 20);
   };
 
+  const isAccommodation = currentPath.includes("accommodation") || currentPath.includes("book-stay");
+
   useEffect(() => {
     function handleResize() {
       const screenWidth = window.innerWidth;
@@ -173,8 +175,6 @@ export default function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [isLocked, isAccommodation]);
-
-  const isAccommodation = currentPath.includes("accommodation") || currentPath.includes("book-stay");
 
   useEffect(() => {
     if (isLocked && !isAccommodation) {
