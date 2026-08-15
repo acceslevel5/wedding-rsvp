@@ -3917,16 +3917,23 @@ export default function Landing({
     };
   };
 
+  const isExpanded = step === 'transitioning' || step === 'unlocked';
+  const currentScale = typeof window !== 'undefined' && window.innerWidth < 480 ? window.innerWidth / 402 : 1;
+  const viewportHeightScaled = typeof window !== 'undefined' ? window.innerHeight / currentScale : 800;
+  const heroHeight = isExpanded ? 710 : Math.max(710, viewportHeightScaled);
+
   return (
     <div className="relative w-[402px] h-[8659px]" data-name="Landing">
       <div className="absolute left-[79px] size-[254px] top-[8740px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
       <div 
-        className="absolute left-0 top-0 w-[402px] h-[710px] overflow-hidden z-20" 
+        className="absolute left-0 top-0 w-[402px] overflow-hidden z-20" 
         style={{ 
+          height: `${heroHeight}px`,
           background: '#EC5F52',
           boxShadow: '0 0 0 3px #EC5F52',
+          transition: 'height 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
         data-name="HeroWrapper"
       >
