@@ -3688,7 +3688,7 @@ export default function Landing({
     return {
       position: 'absolute',
       left: '138px',   // centered in 250px photobooth
-      top: '238px',    // 68px below photobooth top (170px + 68px)
+      top: '218px',    // 68px below photobooth top (150px + 68px)
       width: '127px',  // 127px mask width
       minWidth: '127px',
       maxWidth: '127px',
@@ -3849,7 +3849,7 @@ export default function Landing({
           className="absolute transition-opacity duration-1000 z-10"
           style={{
             left: '76px',
-            top: '170px',
+            top: '150px',
             width: '250px',
             height: '440px',
             opacity: (step === 'transitioning' || step === 'unlocked') ? 0 : 1,
@@ -3872,7 +3872,7 @@ export default function Landing({
         <div 
           className="absolute left-0 w-full flex justify-center z-30 transition-opacity duration-1000"
           style={{
-            top: '632px',
+            top: '612px',
             opacity: step === 'locked' ? 1 : 0,
             pointerEvents: step === 'locked' ? 'auto' : 'none',
           }}
