@@ -339,8 +339,12 @@ import imgImage9 from "./6c590bc9a68493798aa84d309533e423f2f3e3c8.png";
 import imgImage11 from "./1613d811fda01150e34828fa74a702460eabab63.png";
 import imgImage12 from "./a82a9ee50e31e80118eb5016ff78bc5d1e8f8062.png";
 import imgImage10 from "./672fa1b57ac1ff3c7c0332d5f72735c8d31c49f7.png";
-import imgImage8 from "./7a7a1fda92711f7908f867f3b7d1545ad7a40b15.png";
 import imgHolyCeremony from "./holyceremony.png";
+import imgWarmWelcome from "./warm welcome.png";
+import imgSayingIDo from "./saying i do.png";
+import imgCocktailHour from "./cocktail hour.png";
+import imgDinnerToasts from "./dinner toasts.png";
+import imgCakeCelebration from "./cake celebration.png";
 
 function Bg() {
   const tiles = Array.from({ length: 17 });
@@ -3619,35 +3623,35 @@ function TimelineSection() {
       time: "15:30",
       title: "Warm Welcome",
       description: "Gathering for welcome drinks and capturing sweet memories",
-      imgSrc: null,
+      imgSrc: imgWarmWelcome,
       alt: "Warm Welcome",
     },
     {
       time: "16:00",
       title: 'Saying "I Do"',
       description: "Join us as we officially sign our love story",
-      imgSrc: null,
+      imgSrc: imgSayingIDo,
       alt: "Saying I Do",
     },
     {
       time: "16:30",
       title: "Cocktail Hour",
       description: "Raising a glass together with light bites and smiles",
-      imgSrc: null,
+      imgSrc: imgCocktailHour,
       alt: "Cocktail Hour",
     },
     {
       time: "18:00",
       title: "Dinner & Toasts",
       description: "Sharing a delicious feast, heartfelt words and laughter",
-      imgSrc: null,
+      imgSrc: imgDinnerToasts,
       alt: "Dinner and Toasts",
     },
     {
       time: "21:00",
       title: "Cake & Celebration",
       description: "A sweet tradition followed by dancing the night away",
-      imgSrc: null,
+      imgSrc: imgCakeCelebration,
       alt: "Cake & Celebration",
     },
   ];
