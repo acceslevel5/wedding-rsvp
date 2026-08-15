@@ -3770,7 +3770,7 @@ export default function Landing({
               alignItems: 'center',
               gap: '14px',
               position: 'absolute',
-              top: '42px',
+              top: '18px',
               left: '0',
             }}
           >
@@ -3821,7 +3821,7 @@ export default function Landing({
           <div
             style={{
               position: 'absolute',
-              top: '94px',
+              top: '70px',
               width: '402px',
               display: 'flex',
               justifyContent: 'center',
