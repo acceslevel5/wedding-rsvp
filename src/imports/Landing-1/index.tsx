@@ -3710,8 +3710,8 @@ export default function Landing({
     } else if (step === 'printing' || step === 'printed') {
       transformStr = 'translateY(0%) scale(1)';
     } else if (isExpanded) {
-      // Smooth 1.75 scale centered vertically so strip ends at ~555px
-      transformStr = 'translateY(-48px) scale(1.75)';
+      // Shift photo strip higher up (-105px) and scale to 1.6x so bottom ends cleanly at ~548px
+      transformStr = 'translateY(-105px) scale(1.6)';
     }
 
     let transitionStr = 'transform 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
@@ -3733,7 +3733,7 @@ export default function Landing({
       transform: transformStr,
       transition: transitionStr,
       transformOrigin: 'center center',
-      boxShadow: isExpanded ? '0 12px 30px rgba(0,0,0,0.18)' : 'none',
+      boxShadow: 'none',
       background: 'transparent',
     };
   };
@@ -3916,7 +3916,7 @@ export default function Landing({
         <div 
           className="absolute left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none transition-all duration-700"
           style={{
-            top: '568px',
+            top: '595px',
             opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
           }}
         >
@@ -3930,7 +3930,7 @@ export default function Landing({
                   color: '#220406',
                   textAlign: 'center',
                   fontFamily: '"Ballet:Regular", Ballet, cursive',
-                  fontSize: '44px',
+                  fontSize: '38px',
                   fontStyle: 'normal',
                   fontWeight: 400,
                   lineHeight: 'normal',
@@ -3948,7 +3948,7 @@ export default function Landing({
           </div>
 
           {/* Location: Tsikhisdziri (Character-by-character BlurFade) */}
-          <div className="inline-flex justify-center items-center" style={{ marginTop: '-20px' }}>
+          <div className="inline-flex justify-center items-center" style={{ marginTop: '-14px' }}>
             {"Tsikhisdziri".split("").map((char, idx) => (
               <span
                 key={idx}
@@ -3957,7 +3957,7 @@ export default function Landing({
                   color: '#220406',
                   textAlign: 'center',
                   fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                  fontSize: '20px',
+                  fontSize: '18px',
                   fontStyle: 'normal',
                   fontWeight: 200,
                   lineHeight: '140%',
