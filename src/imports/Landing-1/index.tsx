@@ -342,9 +342,9 @@ import imgImage10 from "./672fa1b57ac1ff3c7c0332d5f72735c8d31c49f7.png";
 import imgImage8 from "./7a7a1fda92711f7908f867f3b7d1545ad7a40b15.png";
 
 function Bg() {
-  const tiles = Array.from({ length: 20 });
+  const tiles = Array.from({ length: 17 });
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[710px] overflow-hidden" style={{ height: "7515px" }} data-name="BG">
+    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[710px] overflow-hidden" style={{ height: "6790px" }} data-name="BG">
       {tiles.map((_, idx) => (
         <div key={idx} className="relative shrink-0 size-[402px]" data-name={`white-recycle-paper-texture ${idx + 1}`}>
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
@@ -3913,8 +3913,8 @@ export default function Landing({
   };
 
   return (
-    <div className="relative w-[402px] h-[8775px]" data-name="Landing">
-      <div className="absolute left-[79px] size-[254px] top-[8850px]" data-name="O Sole Mio 1" />
+    <div className="relative w-[402px] h-[8639px]" data-name="Landing">
+      <div className="absolute left-[79px] size-[254px] top-[8720px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
       <div 
