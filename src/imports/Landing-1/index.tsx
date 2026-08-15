@@ -3949,7 +3949,7 @@ export default function Landing({
           </div>
 
           {/* Location: Tsikhisdziri (Figma 24px) */}
-          <div className="inline-flex justify-center items-center" style={{ marginTop: '-36px' }}>
+          <div className="inline-flex justify-center items-center" style={{ marginTop: '-46px' }}>
             {"Tsikhisdziri".split("").map((char, idx) => (
               <span
                 key={idx}
