@@ -113,7 +113,7 @@ export default function App() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   const BASE_WIDTH = 402;
-  const BASE_HEIGHT = 5686;
+  const BASE_HEIGHT = 7868;
 
   const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzZ5MMYiXDR6rpgvYlujvBuyWIUzrMq4BoxtnsbxGKGcU87jj71kAEftIICwzma6_4X7Q/exec";
 

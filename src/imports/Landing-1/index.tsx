@@ -3500,7 +3500,7 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
 
 function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp: any; onSubmit: any; isSubmitting: boolean }) {
   return (
-    <div className="-translate-x-1/2 absolute top-[4500px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
+    <div className="-translate-x-1/2 absolute top-[7345px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
       <div aria-hidden className="absolute bg-[#ffe3f6] inset-0 mix-blend-multiply pointer-events-none" />
       <Frame18 />
       <Frame20 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
@@ -3623,6 +3623,212 @@ export function UnifiedFooter() {
   );
 }
 
+function LeafVineHeader() {
+  return (
+    <svg width="78" height="24" viewBox="0 0 78 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 14C20 11 40 12 74 9" stroke="#3D5030" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M14 13C12 8 16 5 21 9C18 12 15 13 14 13Z" fill="#3D5030"/>
+      <path d="M28 12C27 7 32 4 37 8.5C34 11.5 30 12 28 12Z" fill="#3D5030"/>
+      <path d="M42 11.5C42 6.5 48 4.5 52 9C49 12 44 12 42 11.5Z" fill="#3D5030"/>
+      <path d="M56 10.5C57 5.5 63 4.5 66 8.5C63 11 58 11 56 10.5Z" fill="#3D5030"/>
+      <path d="M20 13.5C23 17 19 20 15 16.5C17 14.5 19 13.5 20 13.5Z" fill="#3D5030"/>
+      <path d="M35 12.8C38 16.5 33 19.5 29 16C31.5 14 33.5 13 35 12.8Z" fill="#3D5030"/>
+      <path d="M49 12C52.5 15.5 48 18.5 44 15.2C46 13.2 47.8 12.2 49 12Z" fill="#3D5030"/>
+    </svg>
+  );
+}
+
+function TimelineSection() {
+  const items = [
+    {
+      time: "12:30",
+      title: "Holy Ceremony",
+      description: "We warmly invite you to witness our vows at the church",
+      imgSrc: "/assets/agenda_1.png",
+      alt: "Holy Ceremony",
+    },
+    {
+      time: "15:30",
+      title: "Warm Welcome",
+      description: "Gathering for welcome drinks and capturing sweet memories",
+      imgSrc: "/assets/agenda_2.png",
+      alt: "Warm Welcome",
+    },
+    {
+      time: "16:00",
+      title: 'Saying "I Do"',
+      description: "Join us as we officially sign our love story",
+      imgSrc: "/assets/agenda_3.png",
+      alt: "Saying I Do",
+    },
+    {
+      time: "16:30",
+      title: "Cocktail Hour",
+      description: "Raising a glass together with light bites and smiles",
+      imgSrc: "/assets/agenda_4.png",
+      alt: "Cocktail Hour",
+    },
+    {
+      time: "18:00",
+      title: "Dinner & Toasts",
+      description: "Sharing a delicious feast, heartfelt words and laughter",
+      imgSrc: "/assets/agenda_5.png",
+      alt: "Dinner and Toasts",
+    },
+    {
+      time: "21:00",
+      title: "Cake & Celebration",
+      description: "A sweet tradition followed by dancing the night away",
+      imgSrc: "/assets/agenda_6.png",
+      alt: "Cake & Celebration",
+    },
+  ];
+
+  return (
+    <div 
+      className="absolute left-0 top-[4467px] w-[402px] flex flex-col items-center z-10"
+      style={{
+        background: '#F8F6F0',
+        paddingTop: '80px',
+        paddingBottom: '120px',
+      }}
+      data-name="AgendaSection"
+    >
+      {/* Header Leaf Icon */}
+      <div className="flex justify-center mb-[14px]">
+        <LeafVineHeader />
+      </div>
+
+      {/* Section Title */}
+      <div className="flex flex-col items-center justify-center text-center mb-[48px]">
+        <h2
+          style={{
+            color: '#2A2E2B',
+            textAlign: 'center',
+            fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
+            fontSize: '36px',
+            fontStyle: 'normal',
+            fontWeight: 200,
+            lineHeight: '110%',
+            letterSpacing: '-0.36px',
+            margin: 0,
+          }}
+        >
+          Wedding Events
+        </h2>
+        <h2
+          style={{
+            color: '#2A2E2B',
+            textAlign: 'center',
+            fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
+            fontSize: '36px',
+            fontStyle: 'normal',
+            fontWeight: 200,
+            lineHeight: '110%',
+            letterSpacing: '-0.36px',
+            margin: 0,
+          }}
+        >
+          Timeline
+        </h2>
+      </div>
+
+      {/* Timeline Items */}
+      <div className="flex flex-col items-center gap-[48px] w-full px-[36px]">
+        {items.map((item, index) => (
+          <RevealContainer key={index} delay={0.05}>
+            <div className="flex flex-col items-center text-center w-full">
+              {/* Image Container */}
+              <div 
+                className="w-[330px] h-[260px] rounded-[16px] overflow-hidden mb-[8px] flex items-center justify-center relative bg-[#EBE7DF]"
+                style={{
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.04)'
+                }}
+              >
+                <img 
+                  src={item.imgSrc} 
+                  alt={item.alt}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLElement).style.display = 'none';
+                  }}
+                />
+                {/* Fallback placeholder until user places agenda images */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-[20px] bg-[#EAE6DE] text-[#2A2E2B]/40">
+                  <span className="text-[32px] mb-[6px]">🖼️</span>
+                  <span 
+                    style={{
+                      fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
+                      fontSize: '15px',
+                      fontWeight: 200,
+                    }}
+                  >
+                    Image for {item.time} ({item.title})
+                  </span>
+                </div>
+              </div>
+
+              {/* Time */}
+              <span
+                style={{
+                  color: '#2A2E2B',
+                  textAlign: 'center',
+                  fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
+                  fontSize: '34px',
+                  fontStyle: 'normal',
+                  fontWeight: 200,
+                  lineHeight: 'normal',
+                  letterSpacing: '-0.17px',
+                  marginTop: '8px',
+                  marginBottom: '8px',
+                  display: 'block',
+                }}
+              >
+                {item.time}
+              </span>
+
+              {/* Title */}
+              <h3
+                style={{
+                  color: '#2A2E2B',
+                  textAlign: 'center',
+                  fontFamily: '"PP Pangaia:Bold", "PP Pangaia", sans-serif',
+                  fontSize: '24px',
+                  fontStyle: 'normal',
+                  fontWeight: 700,
+                  lineHeight: 'normal',
+                  letterSpacing: '-0.12px',
+                  margin: '0 0 4px 0',
+                }}
+              >
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p
+                style={{
+                  color: '#2A2E2B',
+                  textAlign: 'center',
+                  fontFamily: '"Cormorant Garamond", Georgia, serif',
+                  fontSize: '18px',
+                  fontStyle: 'italic',
+                  fontWeight: 500,
+                  lineHeight: 'normal',
+                  letterSpacing: '-0.09px',
+                  margin: 0,
+                  maxWidth: '290px',
+                }}
+              >
+                {item.description}
+              </p>
+            </div>
+          </RevealContainer>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Landing({
   rsvp,
   setRsvp,
@@ -3740,8 +3946,8 @@ export default function Landing({
   };
 
   return (
-    <div className="bg-[#C6B39A] relative w-[402px] h-[5028px]" data-name="Landing">
-      <div className="absolute left-[79px] size-[254px] top-[5222px]" data-name="O Sole Mio 1" />
+    <div className="bg-[#C6B39A] relative w-[402px] h-[7868px]" data-name="Landing">
+      <div className="absolute left-[79px] size-[254px] top-[8060px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
       <div 
@@ -4075,7 +4281,10 @@ export default function Landing({
       {/* 5. Accommodation Section (Starts at top: 3639px) */}
       <Frame3 onBookStay={onBookStay} />
 
-      {/* 6. RSVP Section (Starts at top: 4500px) */}
+      {/* 6. Timeline / Agenda Section (Starts at top: 4467px) */}
+      <TimelineSection />
+
+      {/* 7. RSVP Section (Starts at top: 7345px) */}
       <Frame17 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
     </div>
   );
