@@ -3925,8 +3925,8 @@ export default function Landing({
       <div 
         className="absolute left-0 top-0 w-[402px] h-[710px] overflow-hidden z-20" 
         style={{ 
-          background: '#C6B39A',
-          boxShadow: '0 0 0 3px #C6B39A',
+          background: '#EC5F52',
+          boxShadow: '0 0 0 3px #EC5F52',
         }}
         data-name="HeroWrapper"
       >
@@ -3954,7 +3954,7 @@ export default function Landing({
           >
             <span
               style={{
-                color: '#220406',
+                color: '#FFFFFF',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
                 fontSize: '38px',
@@ -3968,7 +3968,7 @@ export default function Landing({
             </span>
             <span
               style={{
-                color: '#220406',
+                color: '#FFFFFF',
                 textAlign: 'center',
                 fontFamily: '"Babylonica:Regular", Babylonica, cursive',
                 fontSize: '42px',
@@ -3981,7 +3981,7 @@ export default function Landing({
             </span>
             <span
               style={{
-                color: '#220406',
+                color: '#FFFFFF',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
                 fontSize: '38px',
@@ -4008,7 +4008,7 @@ export default function Landing({
           >
             <span
               style={{
-                color: '#220406',
+                color: '#FFFFFF',
                 textAlign: 'center',
                 fontFamily: '"Ballet:Regular", Ballet, cursive',
                 fontSize: '42px',
@@ -4064,18 +4064,18 @@ export default function Landing({
               justifyContent: 'center',
               alignItems: 'center',
               gap: '10px',
-              border: '1px solid #220406',
+              border: '1px solid #FFFFFF',
               borderRadius: '9999px',
               background: 'transparent',
               cursor: 'pointer',
               userSelect: 'none',
             }}
-            className="hover:bg-[#220406]/10 active:scale-[0.96] transition-all duration-300 shadow-md"
+            className="hover:bg-white/10 active:scale-[0.96] transition-all duration-300 shadow-md"
           >
-            <span style={{ color: '#220406', fontSize: '13px', opacity: 0.9 }}>✧</span>
+            <span style={{ color: '#FFFFFF', fontSize: '13px', opacity: 0.9 }}>✧</span>
             <span
               style={{
-                color: '#220406',
+                color: '#FFFFFF',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
                 fontSize: '22px',
@@ -4087,7 +4087,7 @@ export default function Landing({
             >
               Open Invitation
             </span>
-            <span style={{ color: '#220406', fontSize: '13px', opacity: 0.9 }}>✧</span>
+            <span style={{ color: '#FFFFFF', fontSize: '13px', opacity: 0.9 }}>✧</span>
           </button>
         </div>
 
@@ -4106,7 +4106,7 @@ export default function Landing({
                 key={idx}
                 style={{
                   display: 'inline-block',
-                  color: '#220406',
+                  color: '#FFFFFF',
                   textAlign: 'center',
                   fontFamily: '"Ballet:Regular", Ballet, cursive',
                   fontSize: '72px',
@@ -4133,7 +4133,7 @@ export default function Landing({
                 key={idx}
                 style={{
                   display: 'inline-block',
-                  color: '#220406',
+                  color: '#FFFFFF',
                   textAlign: 'center',
                   fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
                   fontSize: '24px',
