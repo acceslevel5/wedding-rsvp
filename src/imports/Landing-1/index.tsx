@@ -384,7 +384,7 @@ function Frame2() {
     <div className="content-stretch flex gap-[14px] h-[60px] items-center justify-center relative shrink-0 w-full whitespace-nowrap" data-name="Frame">
       <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Datuna</p>
       <p className="font-['Babylonica:Regular',sans-serif] leading-[1.5] relative shrink-0 text-[40px]">{`&`}</p>
-      <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Natura</p>
+      <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Natia</p>
     </div>
   );
 }
@@ -776,7 +776,7 @@ function Text() {
 }
 
 function Button() {
-  const title = encodeURIComponent("Datuna & Natura's Wedding");
+  const title = encodeURIComponent("Datuna & Natia's Wedding");
   const details = encodeURIComponent("We are so excited to share this special day with you! Venue: Shukura, Tsikhisdziri.");
   const location = encodeURIComponent("Shukura, Tsikhisdziri, Kobuleti, Georgia");
   const startDate = "20260920T120000Z";
@@ -3508,7 +3508,7 @@ function Frame24() {
     <div className="content-stretch flex flex-[1_0_0] gap-[14px] items-center justify-center min-h-px not-italic relative text-[#ffe16c] w-full" data-name="Frame">
       <p className="font-['PP Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Datuna</p>
       <p className="font-['Babylonica:Regular',sans-serif] leading-[1.5] relative shrink-0 text-[40px]">{`&`}</p>
-      <p className="font-['PP Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Natura</p>
+      <p className="font-['PP Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Natia</p>
     </div>
   );
 }
@@ -3535,7 +3535,7 @@ export function UnifiedFooter() {
   const yOffset = "8px";
   const easing = "cubic-bezier(0.16, 1, 0.3, 1)";
 
-  const titleWords = ["Datuna", "&", "Natura"];
+  const titleWords = ["Datuna", "&", "Natia"];
   const subtitleWords = ["Made", "with", "love", "❤️", "by", "Lezho"];
 
   return (
@@ -3938,7 +3938,7 @@ export default function Landing({
             pointerEvents: (step === 'transitioning' || step === 'unlocked') ? 'none' : 'auto',
           }}
         >
-          {/* Datuna & Natura Container */}
+          {/* Datuna & Natia Container */}
           <div 
             style={{
               display: 'flex',
@@ -3991,7 +3991,7 @@ export default function Landing({
                 letterSpacing: '-0.76px',
               }}
             >
-              Natura
+              Natia
             </span>
           </div>
 

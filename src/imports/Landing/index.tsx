@@ -83,7 +83,7 @@ function Frame2() {
     <div className="content-stretch flex gap-[14px] h-[60px] items-center justify-center relative shrink-0 w-full whitespace-nowrap" data-name="Frame">
       <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Datuna</p>
       <p className="font-['Babylonica:Regular',sans-serif] leading-[1.5] relative shrink-0 text-[40px]">{`&`}</p>
-      <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Natura</p>
+      <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Natia</p>
     </div>
   );
 }
@@ -2792,7 +2792,7 @@ function Frame24() {
     <div className="content-stretch flex flex-[1_0_0] gap-[14px] items-center justify-center min-h-px not-italic relative text-[#ffe16c] w-full" data-name="Frame">
       <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Datuna</p>
       <p className="font-['Babylonica:Regular',sans-serif] leading-[1.5] relative shrink-0 text-[40px]">{`&`}</p>
-      <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Natura</p>
+      <p className="font-['PP_Pangaia:Ultralight',sans-serif] leading-[1.15] relative shrink-0 text-[36px] tracking-[-0.72px]">Natia</p>
     </div>
   );
 }
