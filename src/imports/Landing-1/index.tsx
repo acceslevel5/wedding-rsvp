@@ -342,47 +342,14 @@ import imgImage10 from "./672fa1b57ac1ff3c7c0332d5f72735c8d31c49f7.png";
 import imgImage8 from "./7a7a1fda92711f7908f867f3b7d1545ad7a40b15.png";
 
 function Bg() {
+  const tiles = Array.from({ length: 20 });
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[874px] overflow-hidden" style={{ height: "4318px" }} data-name="BG">
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 1">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 2">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 3">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 4">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 5">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 6">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 7">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 8">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 9">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 10">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 11">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 12">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
-      <div className="relative shrink-0 size-[402px]" data-name="white-recycle-paper-texture 13">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
-      </div>
+    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[710px] overflow-hidden" style={{ height: "7515px" }} data-name="BG">
+      {tiles.map((_, idx) => (
+        <div key={idx} className="relative shrink-0 size-[402px]" data-name={`white-recycle-paper-texture ${idx + 1}`}>
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
+        </div>
+      ))}
     </div>
   );
 }
@@ -3946,7 +3913,7 @@ export default function Landing({
   };
 
   return (
-    <div className="bg-[#C6B39A] relative w-[402px] h-[8775px]" data-name="Landing">
+    <div className="relative w-[402px] h-[8775px]" data-name="Landing">
       <div className="absolute left-[79px] size-[254px] top-[8850px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
