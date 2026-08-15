@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
-import { motion } from "motion/react";
 import svgPaths from "./svg-u7hmm6k8ko";
 import imgWhiteRecyclePaperTexture1 from "./b571be2bd644fad5e661573ed90aa6140b66ff99.png";
 import imgLocationAsset from "./locationasset.png";
@@ -1449,8 +1448,15 @@ function RoomCardsCarousel() {
 }
 
 export function AccommodationPage({ onBack }: { onBack?: () => void }) {
+  const [mounted, setMounted] = useState(false);
+
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' as any });
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 20);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleBack = () => {
@@ -1475,20 +1481,25 @@ export function AccommodationPage({ onBack }: { onBack?: () => void }) {
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+    <div 
       className="bg-[#f7f5ef] overflow-y-auto w-full min-h-screen flex flex-col items-center"
-      style={{ WebkitOverflowScrolling: 'touch' }}
+      style={{ 
+        opacity: mounted ? 1 : 0,
+        transform: mounted ? 'translateY(0px)' : 'translateY(16px)',
+        transition: 'opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)',
+        WebkitOverflowScrolling: 'touch' 
+      }}
     >
       <div className="w-full max-w-[402px] flex flex-col items-center pt-6 pb-[40px] relative shrink-0">
         {/* Top Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.30, ease: [0.16, 1, 0.3, 1] }}
+        <div 
           className="relative flex flex-col items-center w-full px-[16px] shrink-0"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? 'translateY(0px)' : 'translateY(16px)',
+            transition: 'opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.30s, transform 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.30s',
+            willChange: 'opacity, transform',
+          }}
         >
           {/* Back Button */}
           <button 
@@ -1558,24 +1569,30 @@ export function AccommodationPage({ onBack }: { onBack?: () => void }) {
               <span>+995 593 262 633</span>
             </a>
           </div>
-        </motion.div>
+        </div>
 
         {/* 11 Room Cards Carousel (40px below contact pills) */}
-        <motion.div 
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.6, delay: 0.64, ease: [0.16, 1, 0.3, 1] }}
+        <div 
           className="w-full mt-[40px] shrink-0"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? 'translateY(0px)' : 'translateY(25px)',
+            transition: 'opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.64s, transform 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.64s',
+            willChange: 'opacity, transform',
+          }}
         >
           <RoomCardsCarousel />
-        </motion.div>
+        </div>
 
         {/* Footer Info Note (40px below indicator dots) */}
-        <motion.div 
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.96, ease: [0.16, 1, 0.3, 1] }}
+        <div 
           className="flex flex-col items-center text-center gap-2 text-xs text-gray-700 mt-[40px] px-[16px] shrink-0"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? 'translateY(0px)' : 'translateY(15px)',
+            transition: 'opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.96s, transform 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.96s',
+            willChange: 'opacity, transform',
+          }}
         >
           <div className="w-7 h-7 rounded-full border border-gray-500 flex items-center justify-center">
             <span className="font-serif italic font-bold text-xs">i</span>
@@ -1588,9 +1605,9 @@ export function AccommodationPage({ onBack }: { onBack?: () => void }) {
               Special rates are subject to room availability, so early booking is recommended.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

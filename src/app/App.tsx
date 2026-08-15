@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { motion } from "motion/react";
 import Landing, { UnifiedFooter, AccommodationPage } from "@/imports/Landing-1/index";
 
 export interface RSVPState {
@@ -236,10 +235,7 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+        <div 
           className="flex justify-center w-full min-h-screen relative" 
           style={{ background: "#1a1c1a" }}
         >
@@ -292,7 +288,7 @@ export default function App() {
               />
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   );
