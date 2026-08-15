@@ -3946,8 +3946,8 @@ export default function Landing({
   };
 
   return (
-    <div className="bg-[#C6B39A] relative w-[402px] h-[8068px]" data-name="Landing">
-      <div className="absolute left-[79px] size-[254px] top-[8260px]" data-name="O Sole Mio 1" />
+    <div className="bg-[#C6B39A] relative w-[402px] h-[8775px]" data-name="Landing">
+      <div className="absolute left-[79px] size-[254px] top-[8850px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
       <div 
