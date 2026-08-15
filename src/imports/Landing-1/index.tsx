@@ -3687,12 +3687,12 @@ export default function Landing({
     const isExpanded = step === 'transitioning' || step === 'unlocked';
     return {
       position: 'absolute',
-      left: '138px',   // centered in 271px photobooth (left: 66px)
-      top: '286px',    // 73px below photobooth top (213px + 73px)
+      left: '138px',   // centered in 250px photobooth
+      top: '238px',    // 68px below photobooth top (170px + 68px)
       width: '127px',  // 127px mask width
       minWidth: '127px',
       maxWidth: '127px',
-      height: '345px', // 345px mask height
+      height: '320px', // 320px mask height
       overflow: isExpanded ? 'visible' : 'hidden', // open mask during scale up!
       zIndex: isExpanded ? 30 : 10, // bring above title and machine
       display: 'flex',
@@ -3710,8 +3710,8 @@ export default function Landing({
     } else if (step === 'printing' || step === 'printed') {
       transformStr = 'translateY(0%) scale(1)';
     } else if (isExpanded) {
-      // 10% reduced scale (2.3337) with top edge at -8px overflow
-      transformStr = 'translateY(-81px) scale(2.3337)';
+      // 10% reduced scale (2.3337) with top edge at -43px overflow
+      transformStr = 'translateY(-43px) scale(2.3337)';
     }
 
     let transitionStr = 'none';
@@ -3761,12 +3761,12 @@ export default function Landing({
             style={{
               display: 'flex',
               width: '402px',
-              height: '60px',
+              height: '54px',
               justifyContent: 'center',
               alignItems: 'center',
               gap: '14px',
               position: 'absolute',
-              top: '58px',
+              top: '42px',
               left: '0',
             }}
           >
@@ -3775,11 +3775,11 @@ export default function Landing({
                 color: '#FFE16C',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                fontSize: '36px',
+                fontSize: '34px',
                 fontStyle: 'normal',
                 fontWeight: 200,
                 lineHeight: '115%',
-                letterSpacing: '-0.72px',
+                letterSpacing: '-0.68px',
               }}
             >
               Datuna
@@ -3789,7 +3789,7 @@ export default function Landing({
                 color: '#FFE16C',
                 textAlign: 'center',
                 fontFamily: '"Babylonica:Regular", Babylonica, cursive',
-                fontSize: '40px',
+                fontSize: '38px',
                 fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: '150%',
@@ -3802,11 +3802,11 @@ export default function Landing({
                 color: '#FFE16C',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                fontSize: '36px',
+                fontSize: '34px',
                 fontStyle: 'normal',
                 fontWeight: 200,
                 lineHeight: '115%',
-                letterSpacing: '-0.72px',
+                letterSpacing: '-0.68px',
               }}
             >
               Natura
@@ -3817,7 +3817,7 @@ export default function Landing({
           <div
             style={{
               position: 'absolute',
-              top: '110px',
+              top: '88px',
               width: '402px',
               display: 'flex',
               justifyContent: 'center',
@@ -3829,7 +3829,7 @@ export default function Landing({
                 color: '#FFE16C',
                 textAlign: 'center',
                 fontFamily: '"Ballet:Regular", Ballet, cursive',
-                fontSize: '48px',
+                fontSize: '44px',
                 fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
@@ -3844,11 +3844,10 @@ export default function Landing({
         <div 
           className="absolute transition-opacity duration-1000 z-10"
           style={{
-            left: '66px',
-            top: '213px',
-            width: '271px',
-            height: '479px',
-            aspectRatio: '43/76',
+            left: '76px',
+            top: '170px',
+            width: '250px',
+            height: '440px',
             opacity: (step === 'transitioning' || step === 'unlocked') ? 0 : 1,
             pointerEvents: (step === 'transitioning' || step === 'unlocked') ? 'none' : 'auto',
           }}
@@ -3869,7 +3868,7 @@ export default function Landing({
         <div 
           className="absolute left-0 w-full flex justify-center z-30 transition-opacity duration-1000"
           style={{
-            top: '680px',
+            top: '632px',
             opacity: step === 'locked' ? 1 : 0,
             pointerEvents: step === 'locked' ? 'auto' : 'none',
           }}
@@ -3878,39 +3877,41 @@ export default function Landing({
             onClick={handleOpenInvitation}
             style={{
               display: 'inline-flex',
-              height: '46px',
-              padding: '2px 36px',
+              height: '44px',
+              padding: '2px 28px',
               justifyContent: 'center',
               alignItems: 'center',
-              gap: '12px',
+              gap: '10px',
               border: '1px solid #FFE16C',
               borderRadius: '9999px',
               background: 'transparent',
               cursor: 'pointer',
               userSelect: 'none',
             }}
-            className="hover:bg-[#FFE16C]/10 active:scale-[0.96] transition-all duration-300 shadow-lg"
+            className="hover:bg-[#FFE16C]/10 active:scale-[0.96] transition-all duration-300 shadow-md"
           >
+            <span style={{ color: '#FFE16C', fontSize: '13px', opacity: 0.9 }}>✧</span>
             <span
               style={{
                 color: '#FFE16C',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                fontSize: '24px',
+                fontSize: '22px',
                 fontStyle: 'normal',
                 fontWeight: 200,
                 lineHeight: '115%',
-                letterSpacing: '-0.48px',
+                letterSpacing: '-0.44px',
               }}
             >
               Open Invitation
             </span>
+            <span style={{ color: '#FFE16C', fontSize: '13px', opacity: 0.9 }}>✧</span>
           </button>
         </div>
 
         {/* Bottom Details: Date and Location with Character-by-Character BlurFade */}
         <div 
-          className="absolute top-[635px] left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none"
+          className="absolute top-[600px] left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none"
         >
           {/* Date: 20.09.2026 (Character-by-character BlurFade) */}
           <div className="inline-flex justify-center items-center">

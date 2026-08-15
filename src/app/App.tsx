@@ -160,7 +160,7 @@ export default function App() {
       if (isLocked && !isAccommodation) {
         // Fit locked screen vertically and horizontally on any mobile viewport (Safari, Chrome, Messenger)
         const scaleW = screenWidth < 480 ? screenWidth / BASE_WIDTH : 1;
-        const scaleH = (screenHeight - 16) / 760; // 760px target height for envelope + button
+        const scaleH = (screenHeight - 10) / 690; // 690px target height for envelope + button
         setScale(Math.min(scaleW, scaleH));
       } else {
         if (screenWidth < 480) {
@@ -237,7 +237,7 @@ export default function App() {
       ) : (
         <div 
           className="flex justify-center w-full min-h-screen relative" 
-          style={{ background: "#1a1c1a" }}
+          style={{ background: isLocked ? "#374b1e" : "#1a1c1a" }}
         >
           {/* Fixed Footer Reveal Container */}
           {!isLocked && (
