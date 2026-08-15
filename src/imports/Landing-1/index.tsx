@@ -3779,11 +3779,11 @@ export default function Landing({
                 color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                fontSize: '42px',
+                fontSize: '38px',
                 fontStyle: 'normal',
                 fontWeight: 200,
                 lineHeight: '115%',
-                letterSpacing: '-0.84px',
+                letterSpacing: '-0.76px',
               }}
             >
               Datuna
@@ -3793,7 +3793,7 @@ export default function Landing({
                 color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"Babylonica:Regular", Babylonica, cursive',
-                fontSize: '46px',
+                fontSize: '42px',
                 fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: '150%',
@@ -3806,11 +3806,11 @@ export default function Landing({
                 color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                fontSize: '42px',
+                fontSize: '38px',
                 fontStyle: 'normal',
                 fontWeight: 200,
                 lineHeight: '115%',
-                letterSpacing: '-0.84px',
+                letterSpacing: '-0.76px',
               }}
             >
               Natura
@@ -3833,7 +3833,7 @@ export default function Landing({
                 color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"Ballet:Regular", Ballet, cursive',
-                fontSize: '56px',
+                fontSize: '42px',
                 fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
