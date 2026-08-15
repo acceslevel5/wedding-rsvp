@@ -1,0 +1,134 @@
+/* ==========================================================================
+   LOCAL CUSTOM FONT MAPPINGS FOR FIGMA GENERATED CLASSES
+   ========================================================================== */
+
+/* 
+   NOTE: Tailwind CSS v4 converts underscores (_) to spaces inside arbitrary values.
+   Therefore, class font-['PP_Pangaia:Ultralight'] compiles to font-family: "PP Pangaia:Ultralight".
+   We define the @font-face family names with spaces to match this compiled output.
+*/
+
+/* PP Pangaia Mappings */
+@font-face {
+    font-family: 'PP Pangaia:Ultralight';
+    src: url('/fonts/PPPangaia-Ultralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Pangaia';
+    src: url('/fonts/PPPangaia-Ultralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Pangaia:Medium';
+    src: url('/fonts/PPPangaia-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Pangaia';
+    src: url('/fonts/PPPangaia-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Pangaia:Bold';
+    src: url('/fonts/PPPangaia-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Babylonica Mapping */
+@font-face {
+    font-family: 'Babylonica:Regular';
+    src: url('/fonts/Babylonica-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Babylonica';
+    src: url('/fonts/Babylonica-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Ballet Mapping */
+@font-face {
+    font-family: 'Ballet:Regular';
+    src: url('/fonts/Ballet-Regular-VariableFont_opsz.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ballet';
+    src: url('/fonts/Ballet-Regular-VariableFont_opsz.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Homemade Apple Mapping */
+@font-face {
+    font-family: 'Homemade Apple:Regular';
+    src: url('/fonts/HomemadeApple-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Cormorant Garamond Mappings */
+@font-face {
+    font-family: 'Cormorant Garamond:Medium';
+    src: url('/fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond:Medium Italic';
+    src: url('/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond:Medium Italic';
+    src: url('/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond:Regular';
+    src: url('/fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond:Bold';
+    src: url('/fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
