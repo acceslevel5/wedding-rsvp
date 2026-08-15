@@ -1190,7 +1190,7 @@ function Group3() {
 
 function Section() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-center left-0 px-[64px] pt-[80px] pb-[120px] top-[1748px] w-[402px]" data-name="Section">
+    <div className="absolute content-stretch flex flex-col gap-[24px] items-center left-0 px-[64px] pt-[80px] pb-[120px] top-[1584px] w-[402px]" data-name="Section">
       <Group />
       <Text />
       <RevealContainer delay={0.4}>
@@ -1635,7 +1635,7 @@ function Frame4({ onBookStay }: { onBookStay?: () => void }) {
 
 function Frame3({ onBookStay }: { onBookStay?: () => void }) {
   return (
-    <div className="absolute h-[828.083px] left-0 top-[3803px] w-[402px]" data-name="AccommodationSection">
+    <div className="absolute h-[828.083px] left-0 top-[3639px] w-[402px]" data-name="AccommodationSection">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[828.083px] left-1/2 top-[calc(50%-0.46px)] w-[402px]" data-name="Union">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="828.083" src={imgUnion} width="402" />
       </div>
@@ -3500,7 +3500,7 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
 
 function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp: any; onSubmit: any; isSubmitting: boolean }) {
   return (
-    <div className="-translate-x-1/2 absolute top-[4664px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
+    <div className="-translate-x-1/2 absolute top-[4500px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
       <div aria-hidden className="absolute bg-[#ffe3f6] inset-0 mix-blend-multiply pointer-events-none" />
       <Frame18 />
       <Frame20 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
@@ -3740,12 +3740,12 @@ export default function Landing({
   };
 
   return (
-    <div className="bg-[#C6B39A] relative w-[402px] h-[5192px]" data-name="Landing">
-      <div className="absolute left-[79px] size-[254px] top-[5386px]" data-name="O Sole Mio 1" />
+    <div className="bg-[#C6B39A] relative w-[402px] h-[5028px]" data-name="Landing">
+      <div className="absolute left-[79px] size-[254px] top-[5222px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
       <div 
-        className="absolute left-0 top-0 w-[402px] h-[874px] overflow-hidden z-20" 
+        className="absolute left-0 top-0 w-[402px] h-[710px] overflow-hidden z-20" 
         style={{ 
           background: '#C6B39A',
           boxShadow: '0 0 0 3px #C6B39A',
@@ -3979,7 +3979,7 @@ export default function Landing({
 
       {/* Location Section */}
       <div 
-        className="absolute left-0 top-[874px] w-[402px] h-[874px] overflow-hidden z-10" 
+        className="absolute left-0 top-[710px] w-[402px] h-[874px] overflow-hidden z-10" 
         data-name="LocationSection"
       >
         {/* Background Asset: locationasset.png */}
@@ -4066,16 +4066,16 @@ export default function Landing({
           </BlurFade>
         </div>
       </div>
-      {/* 3. Add to Calendar Section (Starts at top: 1748px, ends at 2312px with 120px bottom padding) */}
+      {/* 3. Add to Calendar Section (Starts at top: 1584px) */}
       <Section />
 
-      {/* 4. Dress Code Section (Starts at top: 2312px, ends at 3859px with 120px bottom padding) */}
-      <DressCodeSection style={{ top: '2312px' }} />
+      {/* 4. Dress Code Section (Starts at top: 2148px) */}
+      <DressCodeSection style={{ top: '2148px' }} />
 
-      {/* 5. Accommodation Section (Starts at top: 3859px) */}
+      {/* 5. Accommodation Section (Starts at top: 3639px) */}
       <Frame3 onBookStay={onBookStay} />
 
-      {/* 6. RSVP Section (Starts at top: 4650px) */}
+      {/* 6. RSVP Section (Starts at top: 4500px) */}
       <Frame17 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
     </div>
   );
