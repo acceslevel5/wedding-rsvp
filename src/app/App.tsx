@@ -160,7 +160,7 @@ export default function App() {
       if (isLocked && !isAccommodation) {
         // Fit locked screen vertically and horizontally on any mobile viewport (Safari, Chrome, Messenger)
         const scaleW = screenWidth < 480 ? screenWidth / BASE_WIDTH : 1;
-        const scaleH = (screenHeight - 10) / 690; // 690px target height for envelope + button
+        const scaleH = (screenHeight - 10) / 683; // 683px target height for 402x683 viewport
         setScale(Math.min(scaleW, scaleH));
       } else {
         if (screenWidth < 480) {
