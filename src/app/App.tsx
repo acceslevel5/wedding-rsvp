@@ -153,18 +153,27 @@ export default function App() {
   useEffect(() => {
     function handleResize() {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 480) {
-        setScale(screenWidth / BASE_WIDTH);
+      const screenHeight = window.innerHeight;
+      setViewportHeight(screenHeight);
+
+      if (isLocked && !isAccommodation) {
+        // Fit locked screen vertically and horizontally on any mobile viewport (Safari, Chrome, Messenger)
+        const scaleW = screenWidth < 480 ? screenWidth / BASE_WIDTH : 1;
+        const scaleH = (screenHeight - 16) / 760; // 760px target height for envelope + button
+        setScale(Math.min(scaleW, scaleH));
       } else {
-        setScale(1);
+        if (screenWidth < 480) {
+          setScale(screenWidth / BASE_WIDTH);
+        } else {
+          setScale(1);
+        }
       }
-      setViewportHeight(window.innerHeight);
     }
 
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isLocked, isAccommodation]);
 
   const isAccommodation = currentPath.includes("accommodation") || currentPath.includes("book-stay");
 

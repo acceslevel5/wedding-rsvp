@@ -3852,7 +3852,7 @@ export default function Landing({
         <div 
           className="absolute left-0 w-full flex justify-center z-30 transition-opacity duration-1000"
           style={{
-            top: '744px',
+            top: '680px',
             opacity: step === 'locked' ? 1 : 0,
             pointerEvents: step === 'locked' ? 'auto' : 'none',
           }}
@@ -3872,7 +3872,7 @@ export default function Landing({
               cursor: 'pointer',
               userSelect: 'none',
             }}
-            className="hover:bg-[#FFE16C]/10 active:scale-[0.96] transition-all duration-300"
+            className="hover:bg-[#FFE16C]/10 active:scale-[0.96] transition-all duration-300 shadow-lg"
           >
             <span
               style={{
@@ -3893,7 +3893,7 @@ export default function Landing({
 
         {/* Bottom Details: Date and Location with Character-by-Character BlurFade */}
         <div 
-          className="absolute top-[694px] left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none"
+          className="absolute top-[635px] left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none"
         >
           {/* Date: 20.09.2026 (Character-by-character BlurFade) */}
           <div className="inline-flex justify-center items-center">
