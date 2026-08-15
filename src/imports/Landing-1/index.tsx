@@ -3917,7 +3917,7 @@ export default function Landing({
         <div 
           className="absolute left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none transition-all duration-700"
           style={{
-            top: '534px',
+            top: '550px',
             opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
           }}
         >
@@ -3934,10 +3934,7 @@ export default function Landing({
                   fontSize: '72px',
                   fontStyle: 'normal',
                   fontWeight: 400,
-                  lineHeight: '1.2',
-                  paddingTop: '16px',
-                  paddingBottom: '8px',
-                  overflow: 'visible',
+                  lineHeight: 'normal',
                   opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
                   filter: (step === 'transitioning' || step === 'unlocked') ? 'blur(0px)' : 'blur(8px)',
                   transform: (step === 'transitioning' || step === 'unlocked') ? 'translateY(0px)' : 'translateY(6px)',
