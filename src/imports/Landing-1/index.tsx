@@ -3737,7 +3737,7 @@ export default function Landing({
   };
 
   return (
-    <div className="bg-white relative w-[402px] h-[5192px]" data-name="Landing">
+    <div className="bg-[#374b1e] relative w-[402px] h-[5192px]" data-name="Landing">
       <div className="absolute left-[79px] size-[254px] top-[5386px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
@@ -3745,6 +3745,7 @@ export default function Landing({
         className="absolute left-0 top-0 w-[402px] h-[874px] overflow-hidden z-20" 
         style={{ 
           background: '#374b1e',
+          boxShadow: '0 0 0 3px #374b1e',
         }}
         data-name="HeroWrapper"
       >
