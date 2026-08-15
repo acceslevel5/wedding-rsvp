@@ -3710,13 +3710,15 @@ export default function Landing({
     } else if (step === 'printing' || step === 'printed') {
       transformStr = 'translateY(0%) scale(1)';
     } else if (isExpanded) {
-      // 10% reduced scale (2.3337) with top edge at -43px overflow
-      transformStr = 'translateY(-43px) scale(2.3337)';
+      // Smooth 1.75 scale centered vertically so strip ends at ~555px
+      transformStr = 'translateY(-48px) scale(1.75)';
     }
 
-    let transitionStr = 'none';
+    let transitionStr = 'transform 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
     if (step === 'printing') {
       transitionStr = 'transform 3.5s linear';
+    } else if (step === 'printed') {
+      transitionStr = 'transform 0.1s ease-out';
     } else if (isExpanded) {
       transitionStr = 'transform 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
     }
@@ -3731,7 +3733,7 @@ export default function Landing({
       transform: transformStr,
       transition: transitionStr,
       transformOrigin: 'center center',
-      boxShadow: 'none',
+      boxShadow: isExpanded ? '0 12px 30px rgba(0,0,0,0.18)' : 'none',
       background: 'transparent',
     };
   };
@@ -3910,9 +3912,13 @@ export default function Landing({
           </button>
         </div>
 
-        {/* Bottom Details: Date and Location with Character-by-Character BlurFade */}
+        {/* Bottom Details: Date and Location placed cleanly BELOW expanded photo strip */}
         <div 
-          className="absolute top-[600px] left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none"
+          className="absolute left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none transition-all duration-700"
+          style={{
+            top: '568px',
+            opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
+          }}
         >
           {/* Date: 20.09.2026 (Character-by-character BlurFade) */}
           <div className="inline-flex justify-center items-center">
@@ -3924,7 +3930,7 @@ export default function Landing({
                   color: '#220406',
                   textAlign: 'center',
                   fontFamily: '"Ballet:Regular", Ballet, cursive',
-                  fontSize: '72px',
+                  fontSize: '44px',
                   fontStyle: 'normal',
                   fontWeight: 400,
                   lineHeight: 'normal',
@@ -3932,7 +3938,7 @@ export default function Landing({
                   filter: (step === 'transitioning' || step === 'unlocked') ? 'blur(0px)' : 'blur(8px)',
                   transform: (step === 'transitioning' || step === 'unlocked') ? 'translateY(0px)' : 'translateY(6px)',
                   transition: 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
-                  transitionDelay: `${1.2 + idx * 0.08}s`,
+                  transitionDelay: `${0.6 + idx * 0.06}s`,
                   willChange: 'opacity, filter, transform',
                 }}
               >
@@ -3942,7 +3948,7 @@ export default function Landing({
           </div>
 
           {/* Location: Tsikhisdziri (Character-by-character BlurFade) */}
-          <div className="inline-flex justify-center items-center" style={{ marginTop: '-38px' }}>
+          <div className="inline-flex justify-center items-center" style={{ marginTop: '-20px' }}>
             {"Tsikhisdziri".split("").map((char, idx) => (
               <span
                 key={idx}
@@ -3951,15 +3957,15 @@ export default function Landing({
                   color: '#220406',
                   textAlign: 'center',
                   fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                  fontSize: '24px',
+                  fontSize: '20px',
                   fontStyle: 'normal',
                   fontWeight: 200,
-                  lineHeight: '160%',
+                  lineHeight: '140%',
                   opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
                   filter: (step === 'transitioning' || step === 'unlocked') ? 'blur(0px)' : 'blur(8px)',
                   transform: (step === 'transitioning' || step === 'unlocked') ? 'translateY(0px)' : 'translateY(6px)',
                   transition: 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
-                  transitionDelay: `${1.7 + idx * 0.07}s`,
+                  transitionDelay: `${1.1 + idx * 0.05}s`,
                   willChange: 'opacity, filter, transform',
                 }}
               >
