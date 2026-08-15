@@ -3737,15 +3737,15 @@ export default function Landing({
   };
 
   return (
-    <div className="bg-[#374b1e] relative w-[402px] h-[5192px]" data-name="Landing">
+    <div className="bg-[#C6B39A] relative w-[402px] h-[5192px]" data-name="Landing">
       <div className="absolute left-[79px] size-[254px] top-[5386px]" data-name="O Sole Mio 1" />
       <Bg />
       {/* Interactive Photobooth HeroWrapper */}
       <div 
         className="absolute left-0 top-0 w-[402px] h-[874px] overflow-hidden z-20" 
         style={{ 
-          background: '#374b1e',
-          boxShadow: '0 0 0 3px #374b1e',
+          background: '#C6B39A',
+          boxShadow: '0 0 0 3px #C6B39A',
         }}
         data-name="HeroWrapper"
       >
@@ -3773,7 +3773,7 @@ export default function Landing({
           >
             <span
               style={{
-                color: '#FFE16C',
+                color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
                 fontSize: '34px',
@@ -3787,7 +3787,7 @@ export default function Landing({
             </span>
             <span
               style={{
-                color: '#FFE16C',
+                color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"Babylonica:Regular", Babylonica, cursive',
                 fontSize: '38px',
@@ -3800,7 +3800,7 @@ export default function Landing({
             </span>
             <span
               style={{
-                color: '#FFE16C',
+                color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
                 fontSize: '34px',
@@ -3827,7 +3827,7 @@ export default function Landing({
           >
             <span
               style={{
-                color: '#FFE16C',
+                color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"Ballet:Regular", Ballet, cursive',
                 fontSize: '44px',
@@ -3883,18 +3883,18 @@ export default function Landing({
               justifyContent: 'center',
               alignItems: 'center',
               gap: '10px',
-              border: '1px solid #FFE16C',
+              border: '1px solid #220406',
               borderRadius: '9999px',
               background: 'transparent',
               cursor: 'pointer',
               userSelect: 'none',
             }}
-            className="hover:bg-[#FFE16C]/10 active:scale-[0.96] transition-all duration-300 shadow-md"
+            className="hover:bg-[#220406]/10 active:scale-[0.96] transition-all duration-300 shadow-md"
           >
-            <span style={{ color: '#FFE16C', fontSize: '13px', opacity: 0.9 }}>✧</span>
+            <span style={{ color: '#220406', fontSize: '13px', opacity: 0.9 }}>✧</span>
             <span
               style={{
-                color: '#FFE16C',
+                color: '#220406',
                 textAlign: 'center',
                 fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
                 fontSize: '22px',
@@ -3906,7 +3906,7 @@ export default function Landing({
             >
               Open Invitation
             </span>
-            <span style={{ color: '#FFE16C', fontSize: '13px', opacity: 0.9 }}>✧</span>
+            <span style={{ color: '#220406', fontSize: '13px', opacity: 0.9 }}>✧</span>
           </button>
         </div>
 
@@ -3921,7 +3921,7 @@ export default function Landing({
                 key={idx}
                 style={{
                   display: 'inline-block',
-                  color: '#FFE16C',
+                  color: '#220406',
                   textAlign: 'center',
                   fontFamily: '"Ballet:Regular", Ballet, cursive',
                   fontSize: '72px',
@@ -3948,7 +3948,7 @@ export default function Landing({
                 key={idx}
                 style={{
                   display: 'inline-block',
-                  color: '#FFE16C',
+                  color: '#220406',
                   textAlign: 'center',
                   fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
                   fontSize: '24px',
