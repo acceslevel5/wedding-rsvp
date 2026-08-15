@@ -3661,9 +3661,9 @@ function TimelineSection() {
       }}
       data-name="AgendaSection"
     >
-      {/* Header Leaf Icon */}
+      {/* Header Leaf Icon matching Dress Code section */}
       <div className="flex justify-center mb-[14px]">
-        <LeafVineHeader />
+        <Asset />
       </div>
 
       {/* Section Title */}
