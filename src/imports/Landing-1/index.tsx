@@ -3469,14 +3469,14 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
 function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp: any; onSubmit: any; isSubmitting: boolean }) {
   return (
     <div className="-translate-x-1/2 absolute top-[7525px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
-      <div aria-hidden className="absolute bg-[#ffe3f6] inset-0 mix-blend-multiply pointer-events-none" />
+      <div aria-hidden className="absolute bg-[#DDEAFF] inset-0 mix-blend-multiply pointer-events-none" />
       <Frame18 />
       <Frame20 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
       <div className="-translate-x-1/2 absolute h-[69px] left-1/2 top-[-69px] w-[402px]">
         <div className="absolute inset-[8.58%_0_0_0]">
           <svg className="block size-full" fill="none" height="63.0823" preserveAspectRatio="none" viewBox="0 0 402 63.0823" width="402">
             <g id="Vector 1">
-              <path d={svgPaths.p1a9cdd40} fill="#FFE3F6" style={{ mixBlendMode: "multiply" }} />
+              <path d={svgPaths.p1a9cdd40} fill="#DDEAFF" style={{ mixBlendMode: "multiply" }} />
             </g>
           </svg>
         </div>
@@ -3487,7 +3487,7 @@ function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
             <div className="absolute inset-[8.58%_0_0_0]">
               <svg className="block size-full" fill="none" height="63.0823" preserveAspectRatio="none" viewBox="0 0 402 63.0823" width="402">
                 <g id="Vector 1">
-                  <path d={svgPaths.p1a9cdd40} fill="#FFE3F6" style={{ mixBlendMode: "multiply" }} />
+                  <path d={svgPaths.p1a9cdd40} fill="#DDEAFF" style={{ mixBlendMode: "multiply" }} />
                 </g>
               </svg>
             </div>
