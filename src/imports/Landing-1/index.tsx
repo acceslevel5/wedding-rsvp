@@ -3733,7 +3733,8 @@ export default function Landing({
       transform: transformStr,
       transition: transitionStr,
       transformOrigin: 'center center',
-      boxShadow: isExpanded ? '0 20px 40px rgba(0,0,0,0.18)' : 'none',
+      boxShadow: 'none',
+      filter: 'none',
       background: 'transparent',
     };
   };
