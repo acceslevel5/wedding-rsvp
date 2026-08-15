@@ -340,6 +340,7 @@ import imgImage11 from "./1613d811fda01150e34828fa74a702460eabab63.png";
 import imgImage12 from "./a82a9ee50e31e80118eb5016ff78bc5d1e8f8062.png";
 import imgImage10 from "./672fa1b57ac1ff3c7c0332d5f72735c8d31c49f7.png";
 import imgImage8 from "./7a7a1fda92711f7908f867f3b7d1545ad7a40b15.png";
+import imgHolyCeremony from "./holyceremony.png";
 
 function Bg() {
   const tiles = Array.from({ length: 17 });
@@ -3611,42 +3612,42 @@ function TimelineSection() {
       time: "12:30",
       title: "Holy Ceremony",
       description: "We warmly invite you to witness our vows at the church",
-      imgSrc: "/assets/agenda_1.png",
+      imgSrc: imgHolyCeremony,
       alt: "Holy Ceremony",
     },
     {
       time: "15:30",
       title: "Warm Welcome",
       description: "Gathering for welcome drinks and capturing sweet memories",
-      imgSrc: "/assets/agenda_2.png",
+      imgSrc: null,
       alt: "Warm Welcome",
     },
     {
       time: "16:00",
       title: 'Saying "I Do"',
       description: "Join us as we officially sign our love story",
-      imgSrc: "/assets/agenda_3.png",
+      imgSrc: null,
       alt: "Saying I Do",
     },
     {
       time: "16:30",
       title: "Cocktail Hour",
       description: "Raising a glass together with light bites and smiles",
-      imgSrc: "/assets/agenda_4.png",
+      imgSrc: null,
       alt: "Cocktail Hour",
     },
     {
       time: "18:00",
       title: "Dinner & Toasts",
       description: "Sharing a delicious feast, heartfelt words and laughter",
-      imgSrc: "/assets/agenda_5.png",
+      imgSrc: null,
       alt: "Dinner and Toasts",
     },
     {
       time: "21:00",
       title: "Cake & Celebration",
       description: "A sweet tradition followed by dancing the night away",
-      imgSrc: "/assets/agenda_6.png",
+      imgSrc: null,
       alt: "Cake & Celebration",
     },
   ];
@@ -3707,32 +3708,31 @@ function TimelineSection() {
             <div className="flex flex-col items-center text-center w-full">
               {/* Image Container */}
               <div 
-                className="w-[330px] h-[260px] rounded-[16px] overflow-hidden mb-[8px] flex items-center justify-center relative bg-[#EBE7DF]"
-                style={{
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.04)'
-                }}
+                className={`w-[330px] h-[260px] overflow-hidden mb-[8px] flex items-center justify-center relative ${
+                  item.imgSrc ? 'bg-transparent' : 'rounded-[16px] bg-[#EBE7DF]'
+                }`}
+                style={item.imgSrc ? {} : { boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}
               >
-                <img 
-                  src={item.imgSrc} 
-                  alt={item.alt}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
-                />
-                {/* Fallback placeholder until user places agenda images */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-[20px] bg-[#EAE6DE] text-[#2A2E2B]/40">
-                  <span className="text-[32px] mb-[6px]">🖼️</span>
-                  <span 
-                    style={{
-                      fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                      fontSize: '15px',
-                      fontWeight: 200,
-                    }}
-                  >
-                    Image for {item.time} ({item.title})
-                  </span>
-                </div>
+                {item.imgSrc ? (
+                  <img 
+                    src={item.imgSrc} 
+                    alt={item.alt}
+                    className="w-full h-full object-contain"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-[20px] bg-[#EAE6DE] text-[#2A2E2B]/40">
+                    <span className="text-[32px] mb-[6px]">🖼️</span>
+                    <span 
+                      style={{
+                        fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
+                        fontSize: '15px',
+                        fontWeight: 200,
+                      }}
+                    >
+                      Image for {item.time} ({item.title})
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Time */}
