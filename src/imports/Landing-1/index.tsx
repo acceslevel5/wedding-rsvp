@@ -3917,7 +3917,7 @@ export default function Landing({
         <div 
           className="absolute left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none transition-all duration-700"
           style={{
-            top: '780px',
+            top: '635px',
             opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
           }}
         >
