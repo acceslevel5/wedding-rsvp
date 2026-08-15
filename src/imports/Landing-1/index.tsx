@@ -3710,8 +3710,8 @@ export default function Landing({
     } else if (step === 'printing' || step === 'printed') {
       transformStr = 'translateY(0%) scale(1)';
     } else if (isExpanded) {
-      // Scale 1.8x (height = 574px) with top edge aligned right at top: 20px
-      transformStr = 'translateY(-218px) scale(1.8)';
+      // Figma exact layout: scale 2.12x (height = 676px), aligned right at top: 0px
+      transformStr = 'translateY(-188px) scale(2.12)';
     }
 
     let transitionStr = 'transform 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
@@ -3733,7 +3733,7 @@ export default function Landing({
       transform: transformStr,
       transition: transitionStr,
       transformOrigin: 'center center',
-      boxShadow: 'none',
+      boxShadow: isExpanded ? '0 20px 40px rgba(0,0,0,0.18)' : 'none',
       background: 'transparent',
     };
   };
@@ -3912,15 +3912,15 @@ export default function Landing({
           </button>
         </div>
 
-        {/* Bottom Details: Date and Location placed cleanly BELOW expanded photo strip */}
+        {/* Bottom Details: Date and Location matching Figma proportions */}
         <div 
           className="absolute left-0 w-full flex flex-col items-center justify-center text-center z-30 pointer-events-none transition-all duration-700"
           style={{
-            top: '605px',
+            top: '700px',
             opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
           }}
         >
-          {/* Date: 20.09.2026 (Character-by-character BlurFade) */}
+          {/* Date: 20.09.2026 (Figma 72px) */}
           <div className="inline-flex justify-center items-center">
             {"20.09.2026".split("").map((char, idx) => (
               <span
@@ -3930,7 +3930,7 @@ export default function Landing({
                   color: '#220406',
                   textAlign: 'center',
                   fontFamily: '"Ballet:Regular", Ballet, cursive',
-                  fontSize: '38px',
+                  fontSize: '72px',
                   fontStyle: 'normal',
                   fontWeight: 400,
                   lineHeight: 'normal',
@@ -3947,8 +3947,8 @@ export default function Landing({
             ))}
           </div>
 
-          {/* Location: Tsikhisdziri (Character-by-character BlurFade) */}
-          <div className="inline-flex justify-center items-center" style={{ marginTop: '-14px' }}>
+          {/* Location: Tsikhisdziri (Figma 24px) */}
+          <div className="inline-flex justify-center items-center" style={{ marginTop: '-36px' }}>
             {"Tsikhisdziri".split("").map((char, idx) => (
               <span
                 key={idx}
@@ -3957,10 +3957,10 @@ export default function Landing({
                   color: '#220406',
                   textAlign: 'center',
                   fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
-                  fontSize: '18px',
+                  fontSize: '24px',
                   fontStyle: 'normal',
                   fontWeight: 200,
-                  lineHeight: '140%',
+                  lineHeight: '160%',
                   opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
                   filter: (step === 'transitioning' || step === 'unlocked') ? 'blur(0px)' : 'blur(8px)',
                   transform: (step === 'transitioning' || step === 'unlocked') ? 'translateY(0px)' : 'translateY(6px)',
