@@ -289,7 +289,7 @@ export default function App() {
       ) : (
         <div 
           className="flex justify-center w-full min-h-screen relative" 
-          style={{ background: isLocked ? "#EC5F52" : "#1a1c1a" }}
+          style={{ background: isLocked ? "#D6C9B7" : "#1a1c1a" }}
         >
           {/* Fixed Footer Reveal Container */}
           {!isLocked && (
