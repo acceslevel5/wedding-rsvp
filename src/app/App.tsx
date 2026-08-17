@@ -127,7 +127,7 @@ function MusicPlayer() {
           {waveBars.map((bar, idx) => (
             <div
               key={idx}
-              className="w-[1.8px] bg-[#7a843e] rounded-full origin-center transition-all duration-300"
+              className="w-[1.8px] bg-[#BC2615] rounded-full origin-center transition-all duration-300"
               style={{
                 height: isPlaying ? bar.height : "2px",
                 animation: isPlaying ? `audio-dance ${bar.duration} ease-in-out ${bar.delay} infinite alternate` : "none",
