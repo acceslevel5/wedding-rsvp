@@ -4465,7 +4465,7 @@ export default function Landing({
                 gap: '12px',
                 marginTop: '24px',
                 borderRadius: '9999px',
-                background: '#C4B093',
+                background: '#D6C9B7',
                 textDecoration: 'none',
                 cursor: 'pointer',
                 userSelect: 'none',
