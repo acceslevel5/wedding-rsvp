@@ -3622,6 +3622,7 @@ function TimelineSection() {
       description: "We warmly invite you to witness our vows at the church",
       imgSrc: imgHolyCeremony,
       alt: "Holy Ceremony",
+      mapUrl: "https://maps.app.goo.gl/PcYKeaCzAHmPLAeg8?g_st=ic",
     },
     {
       time: "15:30",
@@ -3796,6 +3797,37 @@ function TimelineSection() {
               >
                 {item.description}
               </p>
+
+              {/* Optional "Open in Maps" Button */}
+              {item.mapUrl && (
+                <a
+                  href={item.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    height: '44px',
+                    padding: '2px 28px',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: '16px',
+                    borderRadius: '9999px',
+                    background: '#FFE16C',
+                    color: '#000',
+                    textAlign: 'center',
+                    fontFamily: '"PP Pangaia:Ultralight", "PP Pangaia", sans-serif',
+                    fontSize: '22px',
+                    fontWeight: 200,
+                    lineHeight: '115%',
+                    letterSpacing: '-0.44px',
+                    textDecoration: 'none',
+                    userSelect: 'none',
+                  }}
+                  className="hover:opacity-90 active:scale-[0.96] transition-all duration-300 shadow-sm"
+                >
+                  Open in Maps
+                </a>
+              )}
             </div>
           </RevealContainer>
         ))}
@@ -4235,12 +4267,12 @@ export default function Landing({
                 gap: '12px',
                 marginTop: '24px',
                 borderRadius: '9999px',
-                background: '#FFF',
+                background: '#C4B093',
                 textDecoration: 'none',
                 cursor: 'pointer',
                 userSelect: 'none',
               }}
-              className="hover:bg-white/90 active:scale-[0.96] transition-all duration-300 shadow-md"
+              className="hover:opacity-90 active:scale-[0.96] transition-all duration-300 shadow-md"
             >
               <span
                 style={{
