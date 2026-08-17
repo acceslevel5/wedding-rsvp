@@ -3805,7 +3805,7 @@ function TimelineSection() {
     {
       time: "12:30",
       title: "Holy Ceremony",
-      description: "We warmly invite you to witness our vows at the church",
+      description: "We warmly invite you to witness our vows at the Holy Mother Virgin Nativity Cathedral",
       imgSrc: imgHolyCeremony,
       alt: "Holy Ceremony",
       mapUrl: "https://maps.app.goo.gl/PcYKeaCzAHmPLAeg8?g_st=ic",
@@ -3816,6 +3816,7 @@ function TimelineSection() {
       description: "Gathering for welcome drinks and capturing sweet memories",
       imgSrc: imgWarmWelcome,
       alt: "Warm Welcome",
+      mapUrl: "https://maps.app.goo.gl/dDuek7Vtjm7gmQxU6",
     },
     {
       time: "16:00",
