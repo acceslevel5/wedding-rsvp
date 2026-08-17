@@ -228,8 +228,13 @@ export default function App() {
     };
   }, [isLocked, isAccommodation]);
 
+  const guestCount = Array.isArray(rsvp.guests) ? rsvp.guests.length : 1;
+  const extraHeight = (guestCount - 1) * 150;
+  const currentBaseHeight = BASE_HEIGHT + extraHeight;
+
   function handleSubmit() {
-    const invalidGuest = rsvp.guests.find(
+    const guests = Array.isArray(rsvp.guests) ? rsvp.guests : [{ id: "1", name: (rsvp as any).name || "", attendance: (rsvp as any).attendance || null }];
+    const invalidGuest = guests.find(
       (g) => !g.name.trim() || !g.attendance
     );
     if (invalidGuest) {
@@ -239,25 +244,26 @@ export default function App() {
 
     setIsSubmitting(true);
 
-    const guestSummaries = rsvp.guests
-      .map((g) => `${g.name.trim()} (${g.attendance === "yes" ? "Attending" : "Not attending"})`)
-      .join("; ");
+    const timestamp = new Date().toLocaleString();
 
-    const data = {
-      guest_name: guestSummaries,
-      attendance: rsvp.guests.map((g) => g.attendance).join(", "),
-      total_guests: rsvp.guests.length,
-      timestamp: new Date().toLocaleString()
-    };
+    // Fire a separate request per guest so Google Sheets appends 1 row per guest
+    const fetchPromises = guests.map((g) => {
+      const data = {
+        guest_name: g.name.trim(),
+        attendance: g.attendance,
+        timestamp: timestamp
+      };
+      return fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+    });
 
-    fetch(GOOGLE_SHEET_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
+    Promise.all(fetchPromises)
       .then(() => {
         setIsSubmitting(false);
         setRsvp((s) => ({ ...s, submitted: true }));
@@ -311,7 +317,7 @@ export default function App() {
             className="relative overflow-hidden z-10" 
             style={{ 
               width: `${BASE_WIDTH * scale}px`, 
-              height: isLocked ? `${viewportHeight}px` : `${BASE_HEIGHT * scale}px`,
+              height: isLocked ? `${viewportHeight}px` : `${currentBaseHeight * scale}px`,
               transition: "width 0.05s ease, height 0.05s ease"
             }}
           >
@@ -319,7 +325,7 @@ export default function App() {
               className="absolute left-0 top-0 origin-top-left"
               style={{ 
                 width: `${BASE_WIDTH}px`, 
-                height: isLocked ? `${viewportHeight / scale}px` : `${BASE_HEIGHT}px`,
+                height: isLocked ? `${viewportHeight / scale}px` : `${currentBaseHeight}px`,
                 transform: `scale(${scale})`
               }}
             >
