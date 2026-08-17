@@ -3518,7 +3518,11 @@ function GuestFormItem({
 }
 
 function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp: any; onSubmit: any; isSubmitting: boolean }) {
-  if (rsvp.submitted) {
+  const safeGuests = Array.isArray(rsvp?.guests)
+    ? rsvp.guests
+    : [{ id: "1", name: rsvp?.name || "", attendance: rsvp?.attendance || null }];
+
+  if (rsvp?.submitted) {
     return (
       <div className="flex flex-col items-center justify-center gap-[16px] w-full py-[32px] fade-in">
         <style dangerouslySetInnerHTML={{__html: `
@@ -3531,12 +3535,12 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
           }
         `}} />
         <p className="font-['Cormorant_Garamond:Medium_Italic',sans-serif] font-medium italic text-[24px] text-black text-center leading-[normal] tracking-[-0.12px]">
-          {rsvp.guests.some((g: any) => g.attendance === "yes")
+          {safeGuests.some((g: any) => g.attendance === "yes")
             ? "We can’t wait to celebrate with you! 🎉"
             : "We’ll miss you, but thank you for letting us know! 💛"}
         </p>
         <div className="flex flex-col items-center gap-[4px]">
-          {rsvp.guests.map((g: any, idx: number) => (
+          {safeGuests.map((g: any, idx: number) => (
             <p key={idx} className="font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[18px] text-[rgba(0,0,0,0.6)] text-center tracking-[-0.09px]">
               {g.name} ({g.attendance === "yes" ? "Attending" : "Not attending"})
             </p>
@@ -3548,45 +3552,58 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
 
   const handleUpdateGuest = (index: number, field: "name" | "attendance", value: any) => {
     setRsvp((prev: any) => {
-      const newGuests = [...prev.guests];
+      const currentGuests = Array.isArray(prev?.guests)
+        ? prev.guests
+        : [{ id: "1", name: prev?.name || "", attendance: prev?.attendance || null }];
+      const newGuests = [...currentGuests];
       newGuests[index] = { ...newGuests[index], [field]: value };
       return { ...prev, guests: newGuests };
     });
   };
 
   const handleAddGuest = () => {
-    if (rsvp.guests.length >= 3) return;
-    setRsvp((prev: any) => ({
-      ...prev,
-      guests: [
-        ...prev.guests,
-        { id: String(Date.now()), name: "", attendance: null },
-      ],
-    }));
+    if (safeGuests.length >= 3) return;
+    setRsvp((prev: any) => {
+      const currentGuests = Array.isArray(prev?.guests)
+        ? prev.guests
+        : [{ id: "1", name: prev?.name || "", attendance: prev?.attendance || null }];
+      return {
+        ...prev,
+        guests: [
+          ...currentGuests,
+          { id: String(Date.now()), name: "", attendance: null },
+        ],
+      };
+    });
   };
 
   const handleRemoveGuest = (index: number) => {
-    setRsvp((prev: any) => ({
-      ...prev,
-      guests: prev.guests.filter((_: any, i: number) => i !== index),
-    }));
+    setRsvp((prev: any) => {
+      const currentGuests = Array.isArray(prev?.guests)
+        ? prev.guests
+        : [{ id: "1", name: prev?.name || "", attendance: prev?.attendance || null }];
+      return {
+        ...prev,
+        guests: currentGuests.filter((_: any, i: number) => i !== index),
+      };
+    });
   };
 
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0 w-full">
-      {rsvp.guests.map((guest: any, index: number) => (
+      {safeGuests.map((guest: any, index: number) => (
         <GuestFormItem
           key={guest.id || index}
           guest={guest}
           index={index}
           onUpdate={(field, value) => handleUpdateGuest(index, field, value)}
           onRemove={() => handleRemoveGuest(index)}
-          showDivider={index < rsvp.guests.length - 1}
+          showDivider={index < safeGuests.length - 1}
         />
       ))}
 
       {/* "+ Add another guest" text button - shown if guests < 3 */}
-      {rsvp.guests.length < 3 && (
+      {safeGuests.length < 3 && (
         <button
           type="button"
           onClick={handleAddGuest}
