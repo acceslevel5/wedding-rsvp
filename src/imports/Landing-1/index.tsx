@@ -348,6 +348,17 @@ import imgCocktailHour from "./cocktail hour.webp";
 import imgDinnerToasts from "./dinner toasts.webp";
 import imgCakeCelebration from "./cake celebration.webp";
 
+import imgRoomBunkCabin from "./Bunk Cabin.webp";
+import imgRoomJuniorQueenSeaView from "./Junior Queen Sea View.webp";
+import imgRoomJuniorKing from "./junior king.webp";
+import imgRoomSignatureKingTownView from "./signature king town view.webp";
+import imgRoomSignatureKingSeaView from "./signature king sea view.webp";
+import imgRoomCornerSuiteTownView from "./Corner Suite Town View.webp";
+import imgRoomCornerSuiteSeaView from "./Corner Suit Sea View.webp";
+import imgRoomOneBedroomSuiteTownView from "./One Bedroom Suite Town View.webp";
+import imgRoomOneBedroomSuiteSeaView from "./One Bedroom Suite Sea View.webp";
+import imgRoomBelleVueSuite from "./Belle Vue Suite.webp";
+
 function Bg() {
   const tiles = Array.from({ length: 18 });
   return (
@@ -1229,101 +1240,92 @@ function Frame8() {
 const ROOMS_DATA = [
   {
     id: 1,
-    title: "Junior King Room Old Town View",
-    description: "A spacious room features with a king-size bed, wooden accents, a balcony and a sitting area. Enjoy views of the old town.",
-    singleRate: "90 USD",
-    doubleRate: "110 USD",
-    image: imgImage5,
+    title: "Cabin Bunk",
+    description: "This room features bunk beds, a view of the inside courtyard and a fun 70s style.",
+    singleRate: "60 USD",
+    doubleRate: "80 USD",
+    image: imgRoomBunkCabin,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 2,
-    title: "Signature King Room Old Town View",
-    description: "A large room with a king-size bed, wooden accents, a sitting area and a balcony with old-town views.",
+    title: "Junior Queen Old Town View",
+    description: "This room includes a queen-size bed and a French balcony. Take in the sights of the historic district.",
     singleRate: "100 USD",
     doubleRate: "120 USD",
-    image: imgImage6,
+    image: imgRoomJuniorQueenSeaView,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 3,
-    title: "Signature King Room Sea View",
-    description: "This room offers a king-size bed, wooden accents, a sitting area and a balcony with sea views.",
-    singleRate: "110 USD",
-    doubleRate: "130 USD",
-    image: imgImage7,
+    title: "Junior King Room Old Town View",
+    description: "A spacious room features with a king-size bed, wooden accents, a balcony and a sitting area. Enjoy views of the old town.",
+    singleRate: "100 USD",
+    doubleRate: "120 USD",
+    image: imgRoomJuniorKing,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 4,
-    title: "King Room Old Town View",
-    description: "Features a plush king-size bed, wooden design accents, and a private balcony overlooking Batumi's charming old town.",
-    singleRate: "85 USD",
-    doubleRate: "105 USD",
-    image: imgImage5,
+    title: "Signature King Room Old Town View",
+    description: "A large room with a king-size bed, wooden accents, a sitting area and a balcony with old-town views.",
+    singleRate: "125 USD",
+    doubleRate: "145 USD",
+    image: imgRoomSignatureKingTownView,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 5,
-    title: "Twin Room Old Town View",
-    description: "Offers two comfortable single beds, warm wooden interior touches, and views of the historic town.",
-    singleRate: "85 USD",
-    doubleRate: "105 USD",
-    image: imgImage6,
+    title: "Signature King Room Sea View",
+    description: "This room offers a king-size bed, wooden accents, a sitting area and a balcony with sea views.",
+    singleRate: "135 USD",
+    doubleRate: "155 USD",
+    image: imgRoomSignatureKingSeaView,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 6,
-    title: "King Room Sea View",
-    description: "Stunning Black Sea views accompanied by a comfortable king-size bed, modern amenities, and private balcony.",
-    singleRate: "95 USD",
-    doubleRate: "115 USD",
-    image: imgImage7,
+    title: "Corner Suite Old Town View",
+    description: "A spacious suite with a queen-sized round bed, modern amenities and stylish decor. Perfect for relaxation.",
+    singleRate: "145 USD",
+    doubleRate: "165 USD",
+    image: imgRoomCornerSuiteTownView,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 7,
-    title: "Twin Room Sea View",
-    description: "Features twin beds and floor-to-ceiling windows with panoramic Black Sea scenery and a private balcony.",
-    singleRate: "95 USD",
-    doubleRate: "115 USD",
-    image: imgImage5,
+    title: "Corner Suite Sea View",
+    description: "The room is a distinctive space that offers a sea view, tastefully furnished with modern amenities and stylish decor, complete with a charming round bed.",
+    singleRate: "155 USD",
+    doubleRate: "175 USD",
+    image: imgRoomCornerSuiteSeaView,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 8,
-    title: "Executive Suite Old Town View",
-    description: "Expansive suite featuring separate living and sleeping areas, premium wooden finishes, and dual balconies.",
-    singleRate: "140 USD",
-    doubleRate: "160 USD",
-    image: imgImage6,
+    title: "One Bedroom Suite Old Town View",
+    description: "A suite consists of a living room and two bedrooms, equipped with a king-size bed. Features a terrace seating area and views of the historic city side.",
+    singleRate: "280 USD",
+    doubleRate: "300 USD",
+    image: imgRoomOneBedroomSuiteTownView,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 9,
-    title: "Executive Suite Sea View",
-    description: "Luxury suite with breathtaking sea vistas, spacious lounge area, plush king bed, and private terrace.",
-    singleRate: "160 USD",
-    doubleRate: "180 USD",
-    image: imgImage7,
+    title: "One Bedroom Suite Sea View",
+    description: "Enjoy a luxurious suite with a living room, two bedrooms, a king-size bed and a terrace sitting space with sea views.",
+    singleRate: "310 USD",
+    doubleRate: "330 USD",
+    image: imgRoomOneBedroomSuiteSeaView,
     link: "https://roomshotels.com/batumi/"
   },
   {
     id: 10,
-    title: "Corner Suite Sea View",
-    description: "Corner positioning provides 270-degree views of the sea and city coastline, complete with custom design elements.",
-    singleRate: "180 USD",
-    doubleRate: "200 USD",
-    image: imgImage5,
-    link: "https://roomshotels.com/batumi/"
-  },
-  {
-    id: 11,
-    title: "Rooms Penthouse Suite",
-    description: "Top-floor penthouse featuring unmatched sea views, expansive private terrace, master bedroom, and dining lounge.",
-    singleRate: "250 USD",
-    doubleRate: "270 USD",
-    image: imgImage6,
+    title: "Belle Vue Suite",
+    description: "Enjoy a luxurious suite with a living room, two bedrooms, a king-size bed and a terrace sitting space with sea views.",
+    singleRate: "440 USD",
+    doubleRate: "460 USD",
+    image: imgRoomBelleVueSuite,
     link: "https://roomshotels.com/batumi/"
   }
 ];
