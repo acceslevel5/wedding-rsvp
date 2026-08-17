@@ -1,9 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import Landing, { UnifiedFooter, AccommodationPage } from "@/imports/Landing-1/index";
 
-export interface RSVPState {
-  attendance: "yes" | "no" | null;
+export interface GuestItem {
+  id: string;
   name: string;
+  attendance: "yes" | "no" | null;
+}
+
+export interface RSVPState {
+  guests: GuestItem[];
   submitted: boolean;
 }
 
@@ -224,16 +229,24 @@ export default function App() {
   }, [isLocked, isAccommodation]);
 
   function handleSubmit() {
-    if (!rsvp.name.trim() || !rsvp.attendance) {
-      alert("გთხოვთ შეავსოთ სახელი და მონიშნოთ დასწრება.");
+    const invalidGuest = rsvp.guests.find(
+      (g) => !g.name.trim() || !g.attendance
+    );
+    if (invalidGuest) {
+      alert("გთხოვთ მიუთითოთ ყველა სტუმრის სახელი და დასწრება.");
       return;
     }
 
     setIsSubmitting(true);
 
+    const guestSummaries = rsvp.guests
+      .map((g) => `${g.name.trim()} (${g.attendance === "yes" ? "Attending" : "Not attending"})`)
+      .join("; ");
+
     const data = {
-      guest_name: rsvp.name,
-      attendance: rsvp.attendance,
+      guest_name: guestSummaries,
+      attendance: rsvp.guests.map((g) => g.attendance).join(", "),
+      total_guests: rsvp.guests.length,
       timestamp: new Date().toLocaleString()
     };
 

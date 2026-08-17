@@ -3434,6 +3434,89 @@ function Frame22({ onSubmit, isSubmitting }: { onSubmit: any; isSubmitting: bool
   );
 }
 
+function GuestFormItem({
+  guest,
+  index,
+  onUpdate,
+  onRemove,
+  showDivider,
+}: {
+  guest: { id: string; name: string; attendance: "yes" | "no" | null };
+  index: number;
+  onUpdate: (field: "name" | "attendance", value: any) => void;
+  onRemove?: () => void;
+  showDivider: boolean;
+}) {
+  return (
+    <div className="flex flex-col gap-[12px] w-full relative">
+      {/* Full Name Label & Input */}
+      <div className="flex flex-col gap-[6px] w-full">
+        <label className="font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[16px] text-black tracking-[-0.08px]">
+          Full Name*
+        </label>
+        <div className="bg-[rgba(255,255,255,0.4)] border border-[#B8D2FB] rounded-[12px] w-full h-[46px] relative flex items-center px-[12px] transition-all focus-within:border-[#77adff]">
+          <input
+            type="text"
+            value={guest.name}
+            onChange={(e) => onUpdate("name", e.target.value)}
+            placeholder="Lezho"
+            className="w-full h-full font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[18px] text-black tracking-[-0.09px] bg-transparent outline-none placeholder-[rgba(0,0,0,0.35)] pr-[28px]"
+          />
+          {index > 0 && onRemove && (
+            <button
+              type="button"
+              onClick={onRemove}
+              className="absolute right-[12px] top-1/2 -translate-y-1/2 w-[22px] h-[22px] flex items-center justify-center rounded-full text-[#4A5568] hover:text-black hover:bg-black/10 active:scale-95 transition-all cursor-pointer border-0 bg-transparent"
+              aria-label="Remove guest"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Will you attend? Toggle Row */}
+      <div className="flex items-center justify-between w-full pt-[2px]">
+        <span className="font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[18px] text-black tracking-[-0.09px]">
+          Will you attend?
+        </span>
+        <div className="flex items-center gap-[6px] bg-[rgba(0,0,0,0.06)] p-[3px] rounded-full">
+          <button
+            type="button"
+            onClick={() => onUpdate("attendance", "yes")}
+            className={`px-[18px] py-[5px] rounded-full font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[16px] transition-all cursor-pointer border-0 ${
+              guest.attendance === "yes"
+                ? "bg-white text-black shadow-xs font-semibold"
+                : "bg-transparent text-[rgba(0,0,0,0.6)] hover:text-black"
+            }`}
+          >
+            Yes
+          </button>
+          <button
+            type="button"
+            onClick={() => onUpdate("attendance", "no")}
+            className={`px-[18px] py-[5px] rounded-full font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[16px] transition-all cursor-pointer border-0 ${
+              guest.attendance === "no"
+                ? "bg-white text-black shadow-xs font-semibold"
+                : "bg-transparent text-[rgba(0,0,0,0.6)] hover:text-black"
+            }`}
+          >
+            No
+          </button>
+        </div>
+      </div>
+
+      {/* Divider if not last */}
+      {showDivider && (
+        <div className="w-full border-t border-[rgba(0,0,0,0.12)] my-[4px]" />
+      )}
+    </div>
+  );
+}
+
 function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp: any; onSubmit: any; isSubmitting: boolean }) {
   if (rsvp.submitted) {
     return (
@@ -3448,28 +3531,82 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
           }
         `}} />
         <p className="font-['Cormorant_Garamond:Medium_Italic',sans-serif] font-medium italic text-[24px] text-black text-center leading-[normal] tracking-[-0.12px]">
-          {rsvp.attendance === "yes"
+          {rsvp.guests.some((g: any) => g.attendance === "yes")
             ? "We can’t wait to celebrate with you! 🎉"
             : "We’ll miss you, but thank you for letting us know! 💛"}
         </p>
-        <p className="font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[18px] text-[rgba(0,0,0,0.5)] text-center tracking-[-0.09px]">
-          {rsvp.name}
-        </p>
+        <div className="flex flex-col items-center gap-[4px]">
+          {rsvp.guests.map((g: any, idx: number) => (
+            <p key={idx} className="font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[18px] text-[rgba(0,0,0,0.6)] text-center tracking-[-0.09px]">
+              {g.name} ({g.attendance === "yes" ? "Attending" : "Not attending"})
+            </p>
+          ))}
+        </div>
       </div>
     );
   }
 
+  const handleUpdateGuest = (index: number, field: "name" | "attendance", value: any) => {
+    setRsvp((prev: any) => {
+      const newGuests = [...prev.guests];
+      newGuests[index] = { ...newGuests[index], [field]: value };
+      return { ...prev, guests: newGuests };
+    });
+  };
+
+  const handleAddGuest = () => {
+    if (rsvp.guests.length >= 3) return;
+    setRsvp((prev: any) => ({
+      ...prev,
+      guests: [
+        ...prev.guests,
+        { id: String(Date.now()), name: "", attendance: null },
+      ],
+    }));
+  };
+
+  const handleRemoveGuest = (index: number) => {
+    setRsvp((prev: any) => ({
+      ...prev,
+      guests: prev.guests.filter((_: any, i: number) => i !== index),
+    }));
+  };
+
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0 w-full">
-      <p className="[word-break:break-word] font-['Cormorant_Garamond:Medium',sans-serif] font-medium leading-[normal] min-w-full relative shrink-0 text-[18px] text-black text-center tracking-[-0.09px] w-[min-content]">Will you attend?</p>
-      <Frame21 rsvp={rsvp} setRsvp={setRsvp} />
-      <div className="h-[72px] relative shrink-0 w-full" data-name="MDS-Public-TW-Text input">
-        <div className="content-stretch flex flex-col gap-[8px] items-start relative size-full">
-          <p className="[word-break:break-word] font-['Cormorant_Garamond:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[16px] text-black tracking-[-0.08px] w-full">Full Name*</p>
-          <InputContainer rsvp={rsvp} setRsvp={setRsvp} />
-        </div>
-      </div>
-      <Frame22 onSubmit={onSubmit} isSubmitting={isSubmitting} />
+      {rsvp.guests.map((guest: any, index: number) => (
+        <GuestFormItem
+          key={guest.id || index}
+          guest={guest}
+          index={index}
+          onUpdate={(field, value) => handleUpdateGuest(index, field, value)}
+          onRemove={() => handleRemoveGuest(index)}
+          showDivider={index < rsvp.guests.length - 1}
+        />
+      ))}
+
+      {/* "+ Add another guest" text button - shown if guests < 3 */}
+      {rsvp.guests.length < 3 && (
+        <button
+          type="button"
+          onClick={handleAddGuest}
+          className="font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[17px] text-[#2A2E2B] hover:text-black cursor-pointer underline-offset-4 hover:underline transition-all bg-transparent border-0 outline-none py-[2px] mt-[4px]"
+        >
+          + Add another guest
+        </button>
+      )}
+
+      {/* Send RSVP Button */}
+      <button
+        type="button"
+        onClick={onSubmit}
+        disabled={isSubmitting}
+        className="bg-[#77adff] h-[46px] w-full rounded-[1000px] cursor-pointer hover:opacity-90 active:scale-[0.98] transition-all border-0 outline-none flex items-center justify-center shadow-xs mt-[8px]"
+      >
+        <span className="font-['PP_Pangaia:Ultralight',sans-serif] text-[24px] text-black text-center tracking-[-0.48px]">
+          {isSubmitting ? "Sending..." : "Send RSVP"}
+        </span>
+      </button>
     </div>
   );
 }
