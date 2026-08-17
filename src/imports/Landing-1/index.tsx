@@ -360,9 +360,9 @@ import imgRoomOneBedroomSuiteSeaView from "./One Bedroom Suite Sea View.webp";
 import imgRoomBelleVueSuite from "./Belle Vue Suite.webp";
 
 function Bg() {
-  const tiles = Array.from({ length: 17 });
+  const tiles = Array.from({ length: 18 });
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[710px] overflow-hidden" style={{ height: "6834px" }} data-name="BG">
+    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[710px] overflow-hidden" style={{ height: "7236px" }} data-name="BG">
       {tiles.map((_, idx) => (
         <div key={idx} className="relative shrink-0 size-[402px]" data-name={`white-recycle-paper-texture ${idx + 1}`}>
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWhiteRecyclePaperTexture1} />
