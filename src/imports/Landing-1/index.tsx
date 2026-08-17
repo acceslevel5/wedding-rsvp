@@ -7,6 +7,7 @@ import imgRoomsLogo from "./roomslogo.svg";
 import imgDateSvg from "./Date.svg";
 import imgGenderFemale from "./gender-female.svg";
 import imgGenderMale from "./gender-male.svg";
+import videoFooter from "./footer video.mp4";
 
 interface BlurFadeProps {
   children: any;
@@ -3729,7 +3730,14 @@ export function UnifiedFooter() {
 
   return (
     <div className="-translate-x-1/2 absolute bottom-0 w-[411px] left-[calc(50%+0.5px)] overflow-hidden" style={{ height: "550px", aspectRatio: "68/91" }} data-name="Footer">
-      <img alt="" className="absolute block inset-0 max-w-none size-full object-cover pointer-events-none" src={imgSubtract} />
+      <video
+        src={videoFooter}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute block inset-0 max-w-none size-full object-cover pointer-events-none"
+      />
       <div className="absolute inset-0 flex flex-col items-center pt-[80px] z-10 px-[24px]">
         
         {/* Title Words */}
