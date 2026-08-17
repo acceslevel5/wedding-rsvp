@@ -1388,16 +1388,16 @@ function RoomCardsCarousel() {
             {/* Divider Line & Rates Block (12px top and bottom gaps) */}
             <div className="w-full border-t border-gray-200/80 pt-[12px] pb-[4px]">
               <div className="text-center">
-                <span style={{ color: '#000', fontFamily: '"PP Pangaia", sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 200, lineHeight: '115%', letterSpacing: '-0.28px' }}>
+                <span style={{ color: '#000', fontFamily: '"PP Pangaia", sans-serif', fontSize: '13px', fontStyle: 'normal', fontWeight: 200, lineHeight: '115%', letterSpacing: '-0.26px' }}>
                   Single Occupancy - 
                 </span>
-                <span style={{ color: '#000', fontFamily: '"PP Pangaia", sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 500, lineHeight: '115%', letterSpacing: '-0.28px' }}>
+                <span style={{ color: '#000', fontFamily: '"PP Pangaia", sans-serif', fontSize: '13px', fontStyle: 'normal', fontWeight: 500, lineHeight: '115%', letterSpacing: '-0.26px' }}>
                   {room.singleRate}
                 </span>
-                <span style={{ color: '#000', fontFamily: '"PP Pangaia", sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 200, lineHeight: '115%', letterSpacing: '-0.28px' }}>
+                <span style={{ color: '#000', fontFamily: '"PP Pangaia", sans-serif', fontSize: '13px', fontStyle: 'normal', fontWeight: 200, lineHeight: '115%', letterSpacing: '-0.26px' }}>
                   &nbsp; Double Occupancy - 
                 </span>
-                <span style={{ color: '#000', fontFamily: '"PP Pangaia", sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 500, lineHeight: '115%', letterSpacing: '-0.28px' }}>
+                <span style={{ color: '#000', fontFamily: '"PP Pangaia", sans-serif', fontSize: '13px', fontStyle: 'normal', fontWeight: 500, lineHeight: '115%', letterSpacing: '-0.26px' }}>
                   {room.doubleRate}
                 </span>
               </div>
