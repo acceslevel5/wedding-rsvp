@@ -3459,7 +3459,7 @@ function GuestFormItem({
             type="text"
             value={guest.name}
             onChange={(e) => onUpdate("name", e.target.value)}
-            placeholder="Lezho"
+            placeholder="Enter your full name"
             className="w-full h-full font-['Cormorant_Garamond:Medium',sans-serif] font-medium text-[18px] text-black tracking-[-0.09px] bg-transparent outline-none placeholder-[rgba(0,0,0,0.35)] pr-[28px]"
           />
           {index > 0 && onRemove && (
