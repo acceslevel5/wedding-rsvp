@@ -1613,7 +1613,7 @@ function Frame4({ onBookStay }: { onBookStay?: () => void }) {
 
 function Frame3({ onBookStay }: { onBookStay?: () => void }) {
   return (
-    <div className="absolute h-[828.083px] left-0 top-[3639px] w-[402px]" data-name="AccommodationSection">
+    <div className="absolute h-[828.083px] left-0 top-[3779px] w-[402px]" data-name="AccommodationSection">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[828.083px] left-1/2 top-[calc(50%-0.46px)] w-[402px]" data-name="Union">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="828.083" src={imgUnion} width="402" />
       </div>
@@ -1973,7 +1973,7 @@ function DressCodeSection({ style }: { style?: React.CSSProperties }) {
       <Frame6 />
 
       {/* 40px Gap between Header and Photo Grid */}
-      <div className="relative w-[402px] h-[1260px] mt-[40px]">
+      <div className="relative w-[402px] h-[1400px] mt-[40px]">
         {/* Photo 1 (top left): image 8 */}
         <RevealAbsolute className="absolute flex h-[290.284px] items-center justify-center left-[1.34px] top-[0px] w-[215.325px]" delay={0}>
           <div className="flex-none rotate-[-6.95deg]">
@@ -2051,37 +2051,37 @@ function DressCodeSection({ style }: { style?: React.CSSProperties }) {
             </div>
           </div>
         </div>
+
+        {/* Dress Code Guidelines: Ladies & Gentlemen 2-column layout */}
+        <BlurFade delay={0.2} className="absolute left-0 top-[1260px] w-[402px] flex justify-center z-20 px-[24px]">
+          <div className="flex items-stretch justify-center w-full max-w-[340px]">
+            {/* Ladies Column */}
+            <div className="flex-1 flex flex-col items-center text-center px-[4px]">
+              <img src={imgGenderFemale} alt="Ladies" className="w-[34px] h-[34px] object-contain mb-[8px]" />
+              <h4 className="font-['Cormorant_Garamond:Bold',serif] font-bold text-[20px] text-[#000] tracking-[-0.3px] mb-[2px]">
+                Ladies
+              </h4>
+              <p className="font-['Cormorant_Garamond:Medium',serif] font-medium text-[15px] text-[#2A2E2B] leading-tight tracking-[-0.2px]">
+                Colorful / Vibrant
+              </p>
+            </div>
+
+            {/* Vertical Divider */}
+            <div className="w-[1px] bg-black/20 shrink-0 mx-[6px] my-[4px]" />
+
+            {/* Gentlemen Column */}
+            <div className="flex-1 flex flex-col items-center text-center px-[4px]">
+              <img src={imgGenderMale} alt="Gentlemen" className="w-[34px] h-[34px] object-contain mb-[8px]" />
+              <h4 className="font-['Cormorant_Garamond:Bold',serif] font-bold text-[20px] text-[#000] tracking-[-0.3px] mb-[2px]">
+                Gentlemen
+              </h4>
+              <p className="font-['Cormorant_Garamond:Medium',serif] font-medium text-[15px] text-[#2A2E2B] leading-tight tracking-[-0.2px]">
+                Black Tuxedo / Suit<br />White Shirt
+              </p>
+            </div>
+          </div>
+        </BlurFade>
       </div>
-
-      {/* Dress Code Guidelines: Ladies & Gentlemen 2-column layout */}
-      <BlurFade delay={0.2} className="w-full flex justify-center mt-[48px] px-[24px]">
-        <div className="flex items-stretch justify-center w-full max-w-[350px]">
-          {/* Ladies Column */}
-          <div className="flex-1 flex flex-col items-center text-center px-[8px]">
-            <img src={imgGenderFemale} alt="Ladies" className="w-[38px] h-[38px] object-contain mb-[10px]" />
-            <h4 className="font-['Cormorant_Garamond:Bold',serif] font-bold text-[21px] text-[#000] tracking-[-0.3px] mb-[4px]">
-              Ladies
-            </h4>
-            <p className="font-['Cormorant_Garamond:Medium',serif] font-medium text-[16px] text-[#2A2E2B] leading-tight tracking-[-0.2px]">
-              Colorful / Vibrant
-            </p>
-          </div>
-
-          {/* Vertical Divider */}
-          <div className="w-[1px] bg-black/20 shrink-0 mx-[8px] my-[6px]" />
-
-          {/* Gentlemen Column */}
-          <div className="flex-1 flex flex-col items-center text-center px-[8px]">
-            <img src={imgGenderMale} alt="Gentlemen" className="w-[38px] h-[38px] object-contain mb-[10px]" />
-            <h4 className="font-['Cormorant_Garamond:Bold',serif] font-bold text-[21px] text-[#000] tracking-[-0.3px] mb-[4px]">
-              Gentlemen
-            </h4>
-            <p className="font-['Cormorant_Garamond:Medium',serif] font-medium text-[16px] text-[#2A2E2B] leading-tight tracking-[-0.2px]">
-              Black Tuxedo / Suit<br />White Shirt
-            </p>
-          </div>
-        </div>
-      </BlurFade>
     </div>
   );
 }
@@ -3662,7 +3662,7 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
 
 function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp: any; onSubmit: any; isSubmitting: boolean }) {
   return (
-    <div className="-translate-x-1/2 absolute top-[7665px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
+    <div className="-translate-x-1/2 absolute top-[7805px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
       <div aria-hidden className="absolute bg-[#DDEAFF] inset-0 mix-blend-multiply pointer-events-none" />
       <Frame18 />
       <Frame20 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
@@ -3849,7 +3849,7 @@ function TimelineSection() {
 
   return (
     <div 
-      className="absolute left-0 top-[4467px] w-[402px] flex flex-col items-center z-10"
+      className="absolute left-0 top-[4607px] w-[402px] flex flex-col items-center z-10"
       style={{
         background: 'transparent',
         paddingTop: '80px',
