@@ -10,6 +10,7 @@ export interface RSVPState {
 function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const wasPlayingRef = useRef(false);
 
   useEffect(() => {
     // Create audio element
@@ -22,6 +23,7 @@ function MusicPlayer() {
       audio.play()
         .then(() => {
           setIsPlaying(true);
+          wasPlayingRef.current = true;
           // Remove interaction listeners once playing starts
           document.removeEventListener("click", startPlay);
           document.removeEventListener("touchstart", startPlay);
@@ -34,10 +36,43 @@ function MusicPlayer() {
     document.addEventListener("click", startPlay);
     document.addEventListener("touchstart", startPlay);
 
+    // Pause audio when page/tab is hidden or phone locked, resume when returning
+    const handleVisibilityChange = () => {
+      if (!audioRef.current) return;
+      if (document.hidden) {
+        if (!audioRef.current.paused) {
+          wasPlayingRef.current = true;
+          audioRef.current.pause();
+          setIsPlaying(false);
+        }
+      } else {
+        if (wasPlayingRef.current) {
+          audioRef.current.play()
+            .then(() => setIsPlaying(true))
+            .catch((err) => console.log("Resume play failed:", err));
+        }
+      }
+    };
+
+    const handlePageHide = () => {
+      if (audioRef.current && !audioRef.current.paused) {
+        wasPlayingRef.current = true;
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pagehide", handlePageHide);
+    window.addEventListener("blur", handlePageHide);
+
     return () => {
       audio.pause();
       document.removeEventListener("click", startPlay);
       document.removeEventListener("touchstart", startPlay);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("pagehide", handlePageHide);
+      window.removeEventListener("blur", handlePageHide);
     };
   }, []);
 
@@ -47,9 +82,13 @@ function MusicPlayer() {
     if (isPlaying) {
       audioRef.current.pause();
       setIsPlaying(false);
+      wasPlayingRef.current = false;
     } else {
       audioRef.current.play()
-        .then(() => setIsPlaying(true))
+        .then(() => {
+          setIsPlaying(true);
+          wasPlayingRef.current = true;
+        })
         .catch((err) => console.error("Play failed:", err));
     }
   };
