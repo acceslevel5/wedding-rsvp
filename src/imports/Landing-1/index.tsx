@@ -3662,7 +3662,7 @@ function Frame20({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
 
 function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp: any; onSubmit: any; isSubmitting: boolean }) {
   return (
-    <div className="-translate-x-1/2 absolute top-[7805px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
+    <div className="-translate-x-1/2 absolute top-[7855px] z-20 content-stretch flex flex-col gap-[48px] items-center left-1/2 pb-[24px] pt-[8px] px-[24px] w-[402px] min-h-[475px]">
       <div aria-hidden className="absolute bg-[#DDEAFF] inset-0 mix-blend-multiply pointer-events-none" />
       <Frame18 />
       <Frame20 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
@@ -3854,7 +3854,7 @@ function TimelineSection() {
       style={{
         background: 'transparent',
         paddingTop: '80px',
-        paddingBottom: '240px',
+        paddingBottom: '290px',
       }}
       data-name="AgendaSection"
     >
