@@ -4,6 +4,7 @@ import imgWhiteRecyclePaperTexture1 from "./b571be2bd644fad5e661573ed90aa6140b66
 import imgLocationAsset from "./locationasset.webp";
 import imgShukuraLogo from "./shukura.svg";
 import imgRoomsLogo from "./roomslogo.svg";
+import imgDateSvg from "./Date.svg";
 
 interface BlurFadeProps {
   children: any;
@@ -4106,35 +4107,30 @@ export default function Landing({
             opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
           }}
         >
-          {/* Date: 20.09.2026 (Figma 72px) */}
-          <div className="inline-flex justify-center items-center">
-            {"20.09.2026".split("").map((char, idx) => (
-              <span
-                key={idx}
-                style={{
-                  display: 'inline-block',
-                  color: '#FFFFFF',
-                  textAlign: 'center',
-                  fontFamily: '"Ballet:Regular", Ballet, cursive',
-                  fontSize: '72px',
-                  fontStyle: 'normal',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                  opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
-                  filter: (step === 'transitioning' || step === 'unlocked') ? 'blur(0px)' : 'blur(8px)',
-                  transform: (step === 'transitioning' || step === 'unlocked') ? 'translateY(0px)' : 'translateY(6px)',
-                  transition: 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
-                  transitionDelay: `${0.6 + idx * 0.06}s`,
-                  willChange: 'opacity, filter, transform',
-                }}
-              >
-                {char}
-              </span>
-            ))}
+          {/* Date: 20.09.2026 (rendered from Date.svg to eliminate mobile font glitches) */}
+          <div 
+            className="inline-flex justify-center items-center mb-[2px]"
+            style={{
+              opacity: (step === 'transitioning' || step === 'unlocked') ? 1 : 0,
+              filter: (step === 'transitioning' || step === 'unlocked') ? 'blur(0px)' : 'blur(8px)',
+              transform: (step === 'transitioning' || step === 'unlocked') ? 'translateY(0px)' : 'translateY(6px)',
+              transition: 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+              transitionDelay: '0.6s',
+              willChange: 'opacity, filter, transform',
+            }}
+          >
+            <img 
+              src={imgDateSvg} 
+              alt="20.09.2026" 
+              className="w-[235px] h-auto object-contain pointer-events-none select-none"
+              style={{
+                filter: 'brightness(0) invert(1)',
+              }}
+            />
           </div>
 
           {/* Location: Tsikhisdziri (Figma 24px) */}
-          <div className="inline-flex justify-center items-center" style={{ marginTop: '-46px' }}>
+          <div className="inline-flex justify-center items-center" style={{ marginTop: '0px' }}>
             {"Tsikhisdziri".split("").map((char, idx) => (
               <span
                 key={idx}
