@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import svgPaths from "./svg-u7hmm6k8ko";
 import imgWhiteRecyclePaperTexture1 from "./b571be2bd644fad5e661573ed90aa6140b66ff99.png";
-import imgLocationAsset from "./locationasset.png";
+import imgLocationAsset from "./locationasset.webp";
 import imgShukuraLogo from "./shukura.svg";
 import imgRoomsLogo from "./roomslogo.svg";
 
@@ -326,11 +326,11 @@ export function RevealAbsolute({
   );
 }
 
-import imgPhotoboothMachine from "./photobooth_machine.png";
-import imgPhotostrip from "./photostrip.png";
-import imgSubtract from "./444e9235245eef74dc951c60d71a7716988d0f8f.png";
+import imgPhotoboothMachine from "./photobooth_machine.webp";
+import imgPhotostrip from "./photostrip.webp";
+import imgSubtract from "./444e9235245eef74dc951c60d71a7716988d0f8f.webp";
 import imgHeroThumbnail from "./0bde0fb7b7298f91fba64b1eb2c05eacd15fb39f.png";
-import imgUnion from "./ad38b9bb655a8094ac3dd084c0e2364783073b46.png";
+import imgUnion from "./ad38b9bb655a8094ac3dd084c0e2364783073b46.webp";
 import imgImage5 from "./53cfc58b69a6f626a5ab1a7f438be72ddb5386cc.png";
 import imgImage6 from "./132f16979643c122ddccab209a5e5aa9833d5684.png";
 import imgImage7 from "./b133bae01bcd5af90bb9d43ae535df601b7f910a.png";
@@ -340,12 +340,12 @@ import imgImage11 from "./1613d811fda01150e34828fa74a702460eabab63.png";
 import imgImage12 from "./a82a9ee50e31e80118eb5016ff78bc5d1e8f8062.png";
 import imgImage10 from "./672fa1b57ac1ff3c7c0332d5f72735c8d31c49f7.png";
 import imgImage8 from "./7a7a1fda92711f7908f867f3b7d1545ad7a40b15.png";
-import imgHolyCeremony from "./holyceremony.png";
-import imgWarmWelcome from "./warm welcome.png";
-import imgSayingIDo from "./saying i do.png";
-import imgCocktailHour from "./cocktail hour.png";
-import imgDinnerToasts from "./dinner toasts.png";
-import imgCakeCelebration from "./cake celebration.png";
+import imgHolyCeremony from "./holyceremony.webp";
+import imgWarmWelcome from "./warm welcome.webp";
+import imgSayingIDo from "./saying i do.webp";
+import imgCocktailHour from "./cocktail hour.webp";
+import imgDinnerToasts from "./dinner toasts.webp";
+import imgCakeCelebration from "./cake celebration.webp";
 
 function Bg() {
   const tiles = Array.from({ length: 18 });
