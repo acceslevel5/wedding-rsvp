@@ -5,6 +5,8 @@ import imgLocationAsset from "./locationasset.webp";
 import imgShukuraLogo from "./shukura.svg";
 import imgRoomsLogo from "./roomslogo.svg";
 import imgDateSvg from "./Date.svg";
+import imgGenderFemale from "./gender-female.svg";
+import imgGenderMale from "./gender-male.svg";
 
 interface BlurFadeProps {
   children: any;
@@ -2050,6 +2052,36 @@ function DressCodeSection({ style }: { style?: React.CSSProperties }) {
           </div>
         </div>
       </div>
+
+      {/* Dress Code Guidelines: Ladies & Gentlemen 2-column layout */}
+      <BlurFade delay={0.2} className="w-full flex justify-center mt-[48px] px-[24px]">
+        <div className="flex items-stretch justify-center w-full max-w-[350px]">
+          {/* Ladies Column */}
+          <div className="flex-1 flex flex-col items-center text-center px-[8px]">
+            <img src={imgGenderFemale} alt="Ladies" className="w-[38px] h-[38px] object-contain mb-[10px]" />
+            <h4 className="font-['Cormorant_Garamond:Bold',serif] font-bold text-[21px] text-[#000] tracking-[-0.3px] mb-[4px]">
+              Ladies
+            </h4>
+            <p className="font-['Cormorant_Garamond:Medium',serif] font-medium text-[16px] text-[#2A2E2B] leading-tight tracking-[-0.2px]">
+              Colorful / Vibrant
+            </p>
+          </div>
+
+          {/* Vertical Divider */}
+          <div className="w-[1px] bg-black/20 shrink-0 mx-[8px] my-[6px]" />
+
+          {/* Gentlemen Column */}
+          <div className="flex-1 flex flex-col items-center text-center px-[8px]">
+            <img src={imgGenderMale} alt="Gentlemen" className="w-[38px] h-[38px] object-contain mb-[10px]" />
+            <h4 className="font-['Cormorant_Garamond:Bold',serif] font-bold text-[21px] text-[#000] tracking-[-0.3px] mb-[4px]">
+              Gentlemen
+            </h4>
+            <p className="font-['Cormorant_Garamond:Medium',serif] font-medium text-[16px] text-[#2A2E2B] leading-tight tracking-[-0.2px]">
+              Black Tuxedo / Suit<br />White Shirt
+            </p>
+          </div>
+        </div>
+      </BlurFade>
     </div>
   );
 }
