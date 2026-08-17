@@ -2063,7 +2063,7 @@ function DressCodeSection({ style }: { style?: React.CSSProperties }) {
                 Ladies
               </h4>
               <p className="font-['Cormorant_Garamond:Medium',serif] font-medium text-[15px] text-[#2A2E2B] leading-tight tracking-[-0.2px]">
-                Colorful / Vibrant
+                Colorful / Vibrant<br />Attire
               </p>
             </div>
 
