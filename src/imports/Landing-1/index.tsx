@@ -3667,7 +3667,7 @@ function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
       <div aria-hidden className="absolute bg-[#DDEAFF] inset-0 mix-blend-multiply pointer-events-none" />
       <Frame18 />
       <Frame20 rsvp={rsvp} setRsvp={setRsvp} onSubmit={onSubmit} isSubmitting={isSubmitting} />
-      <div className="-translate-x-1/2 absolute h-[69px] left-1/2 top-[-69px] w-[402px]">
+      <div className="-translate-x-1/2 absolute h-[69px] left-1/2 top-[-68px] w-[402px] pointer-events-none">
         <div className="absolute inset-[8.58%_0_0_0]">
           <svg className="block size-full" fill="none" height="63.0823" preserveAspectRatio="none" viewBox="0 0 402 63.0823" width="402">
             <g id="Vector 1">
@@ -3676,7 +3676,7 @@ function Frame17({ rsvp, setRsvp, onSubmit, isSubmitting }: { rsvp: any; setRsvp
           </svg>
         </div>
       </div>
-      <div className="-translate-x-1/2 absolute bottom-[-69px] flex h-[69px] items-center justify-center left-1/2 w-[402px]">
+      <div className="-translate-x-1/2 absolute bottom-[-68px] flex h-[69px] items-center justify-center left-1/2 w-[402px] pointer-events-none">
         <div className="-scale-y-100 flex-none">
           <div className="h-[69px] relative w-[402px]">
             <div className="absolute inset-[8.58%_0_0_0]">
