@@ -1353,12 +1353,9 @@ function RoomCardsCarousel() {
       >
         <style dangerouslySetInnerHTML={{__html: `.no-scrollbar::-webkit-scrollbar { display: none; }`}} />
         {ROOMS_DATA.map((room) => (
-          <a
+          <div
             key={room.id}
-            href={room.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-[344px] shrink-0 bg-white snap-center flex flex-col p-[12px] shadow-xs rounded-none text-decoration-none text-black hover:opacity-95 transition-opacity"
+            className="w-[344px] shrink-0 bg-white snap-center flex flex-col p-[12px] shadow-xs rounded-none text-black"
           >
             {/* Image */}
             <div className="w-full h-[195px] overflow-hidden bg-gray-100 mb-[12px]">
@@ -1405,7 +1402,7 @@ function RoomCardsCarousel() {
                 </span>
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
 
